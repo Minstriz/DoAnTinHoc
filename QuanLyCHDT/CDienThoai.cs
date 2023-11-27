@@ -15,6 +15,7 @@ namespace QuanLyCHDT
     [Serializable]
     class CDienThoai
     {
+        //test push
         private string m_idSanPham;
         private string m_idHang; //1 apple, 2 samsung, 3 oppo, 4 huawei
         private string m_tenDienThoai;
