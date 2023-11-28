@@ -9,7 +9,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace QuanLyCHDT
 {
@@ -38,10 +37,9 @@ namespace QuanLyCHDT
                 //MessageBox.Show("đã đọc được dữ liệu!", "Thông báo");
             }
             int selectedIndex = -1;
-
             for (int i = 0; i < dgvDienThoai.SelectedCells.Count; i++)
             {
-                if (dgvDienThoai.SelectedRows[i].Index >= 0)
+                if (i < dgvDienThoai.SelectedCells[i].RowIndex)
                 {
                     selectedIndex = dgvDienThoai.SelectedCells[i].RowIndex;
                     break;
@@ -50,8 +48,6 @@ namespace QuanLyCHDT
             //Đọc dữ liệu từ file
             try
             {
-                if (selectedIndex >= 0 && selectedIndex < dsdtDetail.Count)
-                {
                     // Hiển thị dữ liệu của sản phẩm đã chọn
                     txtIDSanPhamSua.Text = dsdtDetail[selectedIndex].IdSanPham;
                     txtTenDienThoaiSua.Text = dsdtDetail[selectedIndex].TenDienThoai;
@@ -66,12 +62,6 @@ namespace QuanLyCHDT
                     txtRamSua.Text = dsdtDetail[selectedIndex].Ram;
                     txtRomSua.Text = dsdtDetail[selectedIndex].Rom;
                 }
-                else
-                {
-                    // Hiển thị thông báo nếu không có sản phẩm nào được chọn
-                    MessageBox.Show("Vui lòng chọn một sản phẩm để xem chi tiết.");
-                }
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
