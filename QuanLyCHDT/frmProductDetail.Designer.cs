@@ -56,21 +56,7 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvDienThoai = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDienThoai)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSoLuongNhapSua
@@ -367,134 +353,12 @@
             this.pictureBox1.TabIndex = 252;
             this.pictureBox1.TabStop = false;
             // 
-            // dgvDienThoai
-            // 
-            this.dgvDienThoai.BackgroundColor = System.Drawing.Color.Moccasin;
-            this.dgvDienThoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDienThoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column11,
-            this.Column7,
-            this.Column5,
-            this.Column6,
-            this.Column10,
-            this.Column4,
-            this.pin,
-            this.Column8,
-            this.Column9});
-            this.dgvDienThoai.Location = new System.Drawing.Point(108, 654);
-            this.dgvDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvDienThoai.Name = "dgvDienThoai";
-            this.dgvDienThoai.RowHeadersWidth = 51;
-            this.dgvDienThoai.RowTemplate.Height = 24;
-            this.dgvDienThoai.Size = new System.Drawing.Size(563, 124);
-            this.dgvDienThoai.TabIndex = 253;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "IdSanPham";
-            this.Column1.HeaderText = "Mã sản phẩm";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenDienThoai";
-            this.Column2.HeaderText = "Tên điện thoại";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "HangSanXuat";
-            this.Column3.HeaderText = "Hãng ";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "Chip";
-            this.Column11.HeaderText = "Chip";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "HeDieuHanh";
-            this.Column7.HeaderText = "Hệ điều hành";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Ram";
-            this.Column5.HeaderText = "Ram (GB)";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Rom";
-            this.Column6.HeaderText = "Dung lượng (GB)";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "SoLuongNhap";
-            this.Column10.HeaderText = "Số lượng nhập ";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ManHinh";
-            this.Column4.HeaderText = "Màn hình (Inch)";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // pin
-            // 
-            this.pin.DataPropertyName = "Pin";
-            this.pin.HeaderText = "Pin (MAH)";
-            this.pin.MinimumWidth = 6;
-            this.pin.Name = "pin";
-            this.pin.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "GiaNhap";
-            this.Column8.HeaderText = "Giá nhập (VND)";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "GiaBan";
-            this.Column9.HeaderText = "Giá bán (VND)";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
-            // 
             // frmProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1032, 801);
-            this.Controls.Add(this.dgvDienThoai);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSoLuongNhapSua);
@@ -527,7 +391,6 @@
             this.Text = "frmProductDetail";
             this.Load += new System.EventHandler(this.frmProductDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDienThoai)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,18 +425,5 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dgvDienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

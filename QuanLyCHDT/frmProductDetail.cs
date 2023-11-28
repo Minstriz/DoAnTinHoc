@@ -15,63 +15,50 @@ namespace QuanLyCHDT
 {
     public partial class frmProductDetail : Form
     {
-        List<CDienThoai> detail;
+        List<CDienThoai> dsdt = new List<CDienThoai>();
         CTruyXuatDuLieuDienThoai tx = new CTruyXuatDuLieuDienThoai();
+        CXuLyDienThoai xl = new CXuLyDienThoai();
+        private string id;
+
         public frmProductDetail()
         {
             InitializeComponent();
-        }
-        private void hienThi()
-        {
-            dgvDienThoai.DataSource = detail.ToList();
-            
         }
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
-
-        private void frmProductDetail_Load(object sender, EventArgs e)
+        private void hienChiTiet()
         {
-            FileStream fs = new FileStream("QLDSDT.txt", FileMode.Open);
-            BinaryFormatter bf = new BinaryFormatter();
 
-            //Lấy dữ liệu từ file cho vào detail
-            detail = bf.Deserialize(fs) as List<CDienThoai>;
-            fs.Close();
-
-            detail = new List<CDienThoai>();
-            int selectedIndex = -1;
-
-            // Kiểm tra xem có ô nào được chọn trong DataGridView không
-            for (int i = 0; i < dgvDienThoai.SelectedCells.Count; i++)
+            if (tx.docFile_le("idKH.out", ref id) == true)
             {
-                if (dgvDienThoai.SelectedCells[i].RowIndex >= 0)
+                if (xl.timDT(id, dsdt) != null)
                 {
-                    selectedIndex = dgvDienThoai.SelectedCells[i].RowIndex;
-                    break;
+                    CDienThoai dt = xl.timDT(id, dsdt);
+                    txtIDSanPhamSua.Text = dt.IdSanPham;
+                    txtTenDienThoaiSua.Text = dt.TenDienThoai;
+                    txtManHinhSua.Text = dt.ManHinh;
+                    txtHeDieuHanhSua.Text = dt.HeDieuHanh;
+                    txtPinSua.Text = dt.Pin;
+                    txtRamSua.Text = dt.Ram;
+                    txtSoLuongNhapSua.Text = dt.SoLuongNhap;
+                    txtHangSua.Text = dt.HangSanXuat;
+                    txtChipSua.Text = dt.Chip;
+                    txtRomSua.Text = dt.Rom;
+                    txtGiaNhapSua.Text = dt.GiaNhap;
+                    txtGiaBanSua.Text = dt.GiaBan;
                 }
             }
-            //Đọc dữ liệu từ file
-            try
-            {
-                    // Hiển thị dữ liệu của sản phẩm đã chọn
-                    txtIDSanPhamSua.Text = detail[0].IdSanPham;
-                    txtTenDienThoaiSua.Text = detail[0].TenDienThoai;
-                    txtChipSua.Text = detail[0].Chip;
-                    txtGiaBanSua.Text = detail[0].GiaBan;
-                    txtGiaNhapSua.Text = detail[0].GiaNhap;
-                    txtHangSua.Text = detail[0].HangSanXuat;
-                    txtHeDieuHanhSua.Text = detail[0].HeDieuHanh;
-                    txtManHinhSua.Text = detail[0].ManHinh;
-                    txtPinSua.Text = detail[0].Pin;
-                    txtSoLuongNhapSua.Text = detail[0].SoLuongNhap;
-                    txtRamSua.Text = detail[0].Ram;
-                    txtRomSua.Text = detail[0].Rom;
+        }
+        private void frmProductDetail_Load(object sender, EventArgs e)
+        {
+            if (tx.docFile("QLDSDT.txt", ref dsdt)){
+                hienChiTiet();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
+                MessageBox.Show("Deo doc dc");
             }
         }
     }

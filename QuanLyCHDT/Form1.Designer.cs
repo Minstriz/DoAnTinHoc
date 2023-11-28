@@ -186,6 +186,7 @@
             this.dgvDienThoai.Size = new System.Drawing.Size(1276, 765);
             this.dgvDienThoai.TabIndex = 172;
             this.dgvDienThoai.Click += new System.EventHandler(this.dgvDienThoai_Click);
+            this.dgvDienThoai.DoubleClick += new System.EventHandler(this.dgvDienThoai_DoubleClick);
             // 
             // Column1
             // 
@@ -333,6 +334,7 @@
             this.btnSoSanh.Text = "So sánh";
             this.btnSoSanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSoSanh.UseVisualStyleBackColor = true;
+            this.btnSoSanh.Click += new System.EventHandler(this.btnSoSanh_Click);
             // 
             // btnXoa1DienThoai
             // 

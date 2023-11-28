@@ -20,6 +20,7 @@ namespace QuanLyCHDT
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
         private CTruyXuatDuLieuKhachHang txkh =  new CTruyXuatDuLieuKhachHang();
         private CXuLyDienThoai xuly = new CXuLyDienThoai();
+        private CTruyXuatDuLieuDienThoai txdt = new CTruyXuatDuLieuDienThoai();
         private void hienThi()
         {
             dgvDienThoai.DataSource = DsDienThoai.ToList();
@@ -175,8 +176,7 @@ namespace QuanLyCHDT
 
         private void dgvDienThoai_Click(object sender, EventArgs e)
         {
-            frmProductDetail frm = new frmProductDetail();
-            frm.ShowDialog();
+            
         }
 
         private void tabQuanLySanPham_Click(object sender, EventArgs e)
@@ -190,6 +190,28 @@ namespace QuanLyCHDT
         }
 
         private void btnThem1HangSanXuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDienThoai_DoubleClick(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow i in dgvDienThoai.SelectedRows)
+            {
+                string ma = i.Cells[0].Value.ToString();
+                CDienThoai t = xuly.timDT(ma, DsDienThoai);
+                if (t != null)
+                {
+                    string temp;
+                    temp = i.Cells[0].Value.ToString();
+                    txdt.id(temp);
+                }
+            }
+            frmProductDetail frm = new frmProductDetail();
+            frm.ShowDialog();
+        }
+
+        private void btnSoSanh_Click(object sender, EventArgs e)
         {
 
         }
