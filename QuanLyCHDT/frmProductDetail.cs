@@ -15,7 +15,7 @@ namespace QuanLyCHDT
 {
     public partial class frmProductDetail : Form
     {
-        List<CDienThoai> dsdtDetail = new List<CDienThoai>();
+        List<CDienThoai> detail;
         CTruyXuatDuLieuDienThoai tx = new CTruyXuatDuLieuDienThoai();
         public frmProductDetail()
         {
@@ -23,7 +23,8 @@ namespace QuanLyCHDT
         }
         private void hienThi()
         {
-            dgvDienThoai.DataSource = dsdtDetail.ToList();
+            dgvDienThoai.DataSource = detail.ToList();
+            
         }
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
@@ -32,16 +33,20 @@ namespace QuanLyCHDT
 
         private void frmProductDetail_Load(object sender, EventArgs e)
         {
-            if (tx.docFile("QLDSDT.txt", ref dsdtDetail) == true)
-            {
-                hienThi();
-                //MessageBox.Show("đã đọc được dữ liệu!", "Thông báo");
-            }
+            FileStream fs = new FileStream("QLDSDT.txt", FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+
+            //Lấy dữ liệu từ file cho vào detail
+            detail = bf.Deserialize(fs) as List<CDienThoai>;
+            fs.Close();
+
+            detail = new List<CDienThoai>();
             int selectedIndex = -1;
 
+            // Kiểm tra xem có ô nào được chọn trong DataGridView không
             for (int i = 0; i < dgvDienThoai.SelectedCells.Count; i++)
             {
-                if (dgvDienThoai.SelectedRows[i].Index >= 0)
+                if (dgvDienThoai.SelectedCells[i].RowIndex >= 0)
                 {
                     selectedIndex = dgvDienThoai.SelectedCells[i].RowIndex;
                     break;
@@ -50,32 +55,24 @@ namespace QuanLyCHDT
             //Đọc dữ liệu từ file
             try
             {
-                if (selectedIndex >= 0 && selectedIndex < dsdtDetail.Count)
-                {
                     // Hiển thị dữ liệu của sản phẩm đã chọn
-                    txtIDSanPhamSua.Text = dsdtDetail[selectedIndex].IdSanPham;
-                    txtTenDienThoaiSua.Text = dsdtDetail[selectedIndex].TenDienThoai;
-                    txtChipSua.Text = dsdtDetail[selectedIndex].Chip;
-                    txtGiaBanSua.Text = dsdtDetail[selectedIndex].GiaBan;
-                    txtGiaNhapSua.Text = dsdtDetail[selectedIndex].GiaNhap;
-                    txtHangSua.Text = dsdtDetail[selectedIndex].HangSanXuat;
-                    txtHeDieuHanhSua.Text = dsdtDetail[selectedIndex].HeDieuHanh;
-                    txtManHinhSua.Text = dsdtDetail[selectedIndex].ManHinh;
-                    txtPinSua.Text = dsdtDetail[selectedIndex].Pin;
-                    txtSoLuongNhapSua.Text = dsdtDetail[selectedIndex].SoLuongNhap;
-                    txtRamSua.Text = dsdtDetail[selectedIndex].Ram;
-                    txtRomSua.Text = dsdtDetail[selectedIndex].Rom;
-                }
-                else
-                {
-                    // Hiển thị thông báo nếu không có sản phẩm nào được chọn
-                    MessageBox.Show("Vui lòng chọn một sản phẩm để xem chi tiết.");
-                }
+                    txtIDSanPhamSua.Text = detail[0].IdSanPham;
+                    txtTenDienThoaiSua.Text = detail[0].TenDienThoai;
+                    txtChipSua.Text = detail[0].Chip;
+                    txtGiaBanSua.Text = detail[0].GiaBan;
+                    txtGiaNhapSua.Text = detail[0].GiaNhap;
+                    txtHangSua.Text = detail[0].HangSanXuat;
+                    txtHeDieuHanhSua.Text = detail[0].HeDieuHanh;
+                    txtManHinhSua.Text = detail[0].ManHinh;
+                    txtPinSua.Text = detail[0].Pin;
+                    txtSoLuongNhapSua.Text = detail[0].SoLuongNhap;
+                    txtRamSua.Text = detail[0].Ram;
+                    txtRomSua.Text = detail[0].Rom;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
-            }             
+            }
         }
     }
 }

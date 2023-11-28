@@ -16,3 +16,4 @@ D:\Đồ án tin học new\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.frmSuaDien
 D:\Đồ án tin học new\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.frmChiTietHoaDon.resources
 D:\Đồ án tin học new\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.frmProductDetail.resources
 D:\Đồ án tin học new\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.frmNhapHang.resources
+D:\Đồ án tin học new\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.frmDangKy.resources
