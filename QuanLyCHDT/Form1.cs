@@ -15,7 +15,6 @@ namespace QuanLyCHDT
 {
     public partial class FormMain : Form
     {
-        //int indexClick = -1;
         private List<CDienThoai> DsDienThoai = new List<CDienThoai>();
         private List<CKhachHang> dskh = new List<CKhachHang>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
