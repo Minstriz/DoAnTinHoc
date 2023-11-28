@@ -8,7 +8,17 @@ namespace QuanLyCHDT
 {
     internal class CXuLyDienThoai
     {
-
+        public CDienThoai timDT(string ma, List<CDienThoai> dsdt)
+        {
+            foreach (CDienThoai a in dsdt)
+            {
+                if (a.IdSanPham == ma)
+                {
+                    return a;
+                }
+            }
+            return null;
+        }
         public void tim(string comboBoxValue, string value, ref List<CDienThoai> DsDienThoai, ref List<CDienThoai> dsTim)
         {
             foreach (CDienThoai a in DsDienThoai)

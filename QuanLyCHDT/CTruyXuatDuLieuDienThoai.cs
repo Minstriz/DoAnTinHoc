@@ -51,5 +51,61 @@ namespace QuanLyCHDT
                 return false;
             }
         }
+        public bool docFile_le(string fileName, ref string id)
+        {
+            try
+            {
+                StreamReader reader = new StreamReader(fileName);
+
+                // Đọc dữ liệu từ file
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    id = line;
+                }
+
+                // Đóng đối tượng StreamReader
+                reader.Close();
+                return true;
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi đọc file dữ liệu!", "Thông báo");
+                return false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không thể đọc file dữ liệu!", "Thông báo");
+                return false;
+            }
+
+        }
+        public void id(string id)
+        {
+
+            if (ghiFile_le("idKH.out", ref id) == true)
+            {
+                MessageBox.Show("Bạn đã ghi file thành công", "Thông báo");
+            }
+            else MessageBox.Show("Ghi file không thành công", "Thông báo");
+        }
+        public bool ghiFile_le(string fileName, ref string id)
+        {
+            try
+            {
+                StreamWriter writer = new StreamWriter(fileName);
+
+                // Ghi dữ liệu vào file
+                writer.WriteLine(id);
+
+                // Đóng đối tượng StreamWriter
+                writer.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
