@@ -89,16 +89,14 @@
             this.checkBoxDaThanhToan = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.QLHSXdgvHangSanXuat = new System.Windows.Forms.DataGridView();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem1HangSanXuat = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnHuawei = new System.Windows.Forms.RadioButton();
+            this.rdoHuawei = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbDanhSachDTTheoHang = new System.Windows.Forms.Label();
-            this.btnOppo = new System.Windows.Forms.RadioButton();
-            this.btnApple = new System.Windows.Forms.RadioButton();
-            this.btnSamsung = new System.Windows.Forms.RadioButton();
+            this.rdoOppo = new System.Windows.Forms.RadioButton();
+            this.rdoApple = new System.Windows.Forms.RadioButton();
+            this.rdoSamsung = new System.Windows.Forms.RadioButton();
             this.QLHSXdgvDienThoai = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,6 +111,10 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTab.SuspendLayout();
             this.tabQuanLySanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDienThoai)).BeginInit();
@@ -128,6 +130,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHSXdgvDienThoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTab
@@ -137,7 +141,7 @@
             this.MainTab.Controls.Add(this.tabQuanLyDonHang);
             this.MainTab.Controls.Add(this.tabPage3);
             this.MainTab.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainTab.Location = new System.Drawing.Point(1, 1);
+            this.MainTab.Location = new System.Drawing.Point(12, -3);
             this.MainTab.Name = "MainTab";
             this.MainTab.SelectedIndex = 0;
             this.MainTab.Size = new System.Drawing.Size(1608, 812);
@@ -145,6 +149,8 @@
             // 
             // tabQuanLySanPham
             // 
+            this.tabQuanLySanPham.Controls.Add(this.pictureBox4);
+            this.tabQuanLySanPham.Controls.Add(this.pictureBox3);
             this.tabQuanLySanPham.Controls.Add(this.dgvDienThoai);
             this.tabQuanLySanPham.Controls.Add(this.pictureBox1);
             this.tabQuanLySanPham.Controls.Add(this.btnThem1DienThoai);
@@ -178,15 +184,15 @@
             this.pin,
             this.Column8,
             this.Column9});
-            this.dgvDienThoai.Location = new System.Drawing.Point(328, 2);
+            this.dgvDienThoai.Location = new System.Drawing.Point(328, 0);
             this.dgvDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDienThoai.Name = "dgvDienThoai";
             this.dgvDienThoai.RowHeadersWidth = 51;
             this.dgvDienThoai.RowTemplate.Height = 24;
-            this.dgvDienThoai.Size = new System.Drawing.Size(1276, 765);
+            this.dgvDienThoai.Size = new System.Drawing.Size(1276, 767);
             this.dgvDienThoai.TabIndex = 172;
-            this.dgvDienThoai.Click += new System.EventHandler(this.dgvDienThoai_Click);
-            this.dgvDienThoai.DoubleClick += new System.EventHandler(this.dgvDienThoai_DoubleClick);
+            this.dgvDienThoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDienThoai_CellClick);
+            this.dgvDienThoai.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDienThoai_CellDoubleClick);
             // 
             // Column1
             // 
@@ -299,7 +305,7 @@
             this.btnThem1DienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThem1DienThoai.Image = global::QuanLyCHDT.Properties.Resources.icons8_add_30;
             this.btnThem1DienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem1DienThoai.Location = new System.Drawing.Point(41, 232);
+            this.btnThem1DienThoai.Location = new System.Drawing.Point(41, 221);
             this.btnThem1DienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem1DienThoai.Name = "btnThem1DienThoai";
             this.btnThem1DienThoai.Size = new System.Drawing.Size(129, 53);
@@ -313,7 +319,7 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::QuanLyCHDT.Properties.Resources.icons8_exit_30;
-            this.btnThoat.Location = new System.Drawing.Point(176, 232);
+            this.btnThoat.Location = new System.Drawing.Point(176, 221);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(119, 53);
@@ -326,7 +332,7 @@
             // 
             this.btnSoSanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSoSanh.Image = global::QuanLyCHDT.Properties.Resources.icons8_compare_30;
-            this.btnSoSanh.Location = new System.Drawing.Point(41, 387);
+            this.btnSoSanh.Location = new System.Drawing.Point(41, 376);
             this.btnSoSanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSoSanh.Name = "btnSoSanh";
             this.btnSoSanh.Size = new System.Drawing.Size(129, 53);
@@ -340,7 +346,7 @@
             // 
             this.btnXoa1DienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa1DienThoai.Image = global::QuanLyCHDT.Properties.Resources.icons8_delete_30;
-            this.btnXoa1DienThoai.Location = new System.Drawing.Point(176, 307);
+            this.btnXoa1DienThoai.Location = new System.Drawing.Point(176, 296);
             this.btnXoa1DienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa1DienThoai.Name = "btnXoa1DienThoai";
             this.btnXoa1DienThoai.Size = new System.Drawing.Size(119, 53);
@@ -356,7 +362,7 @@
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = global::QuanLyCHDT.Properties.Resources.icons8_replace_30;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(41, 307);
+            this.btnSua.Location = new System.Drawing.Point(41, 296);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(129, 53);
@@ -371,7 +377,7 @@
             this.btnLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.Image = global::QuanLyCHDT.Properties.Resources.icons8_find_30;
             this.btnLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoc.Location = new System.Drawing.Point(176, 387);
+            this.btnLoc.Location = new System.Drawing.Point(176, 376);
             this.btnLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(119, 53);
@@ -454,6 +460,8 @@
             this.txtLocKhachHang.Size = new System.Drawing.Size(409, 34);
             this.txtLocKhachHang.TabIndex = 190;
             this.txtLocKhachHang.Tag = "Nhập dữ liệu tìm kiếm";
+            this.txtLocKhachHang.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLocKhachHang_MouseClick);
+            this.txtLocKhachHang.TextChanged += new System.EventHandler(this.txtLocKhachHang_TextChanged);
             // 
             // dgvKhachHang
             // 
@@ -473,7 +481,7 @@
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
-            this.dgvKhachHang.Size = new System.Drawing.Size(1755, 645);
+            this.dgvKhachHang.Size = new System.Drawing.Size(1559, 645);
             this.dgvKhachHang.TabIndex = 188;
             // 
             // dataGridViewTextBoxColumn1
@@ -548,7 +556,7 @@
             this.btnNhap1KhachHang.Location = new System.Drawing.Point(20, 19);
             this.btnNhap1KhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhap1KhachHang.Name = "btnNhap1KhachHang";
-            this.btnNhap1KhachHang.Size = new System.Drawing.Size(85, 54);
+            this.btnNhap1KhachHang.Size = new System.Drawing.Size(94, 54);
             this.btnNhap1KhachHang.TabIndex = 187;
             this.btnNhap1KhachHang.Text = "Thêm ";
             this.btnNhap1KhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -563,7 +571,7 @@
             this.btnXoa1KhachHang.Location = new System.Drawing.Point(120, 19);
             this.btnXoa1KhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa1KhachHang.Name = "btnXoa1KhachHang";
-            this.btnXoa1KhachHang.Size = new System.Drawing.Size(85, 54);
+            this.btnXoa1KhachHang.Size = new System.Drawing.Size(95, 54);
             this.btnXoa1KhachHang.TabIndex = 183;
             this.btnXoa1KhachHang.Text = "Xóa";
             this.btnXoa1KhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -578,11 +586,12 @@
             this.btnSua1KhachHang.Location = new System.Drawing.Point(221, 19);
             this.btnSua1KhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua1KhachHang.Name = "btnSua1KhachHang";
-            this.btnSua1KhachHang.Size = new System.Drawing.Size(92, 54);
+            this.btnSua1KhachHang.Size = new System.Drawing.Size(105, 54);
             this.btnSua1KhachHang.TabIndex = 184;
             this.btnSua1KhachHang.Text = "Sửa";
             this.btnSua1KhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua1KhachHang.UseVisualStyleBackColor = true;
+            this.btnSua1KhachHang.Click += new System.EventHandler(this.btnSua1KhachHang_Click);
             // 
             // tabQuanLyDonHang
             // 
@@ -787,11 +796,11 @@
             this.tabPage3.Controls.Add(this.QLHSXdgvHangSanXuat);
             this.tabPage3.Controls.Add(this.btnThem1HangSanXuat);
             this.tabPage3.Controls.Add(this.pictureBox2);
-            this.tabPage3.Controls.Add(this.btnHuawei);
+            this.tabPage3.Controls.Add(this.rdoHuawei);
             this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Controls.Add(this.btnOppo);
-            this.tabPage3.Controls.Add(this.btnApple);
-            this.tabPage3.Controls.Add(this.btnSamsung);
+            this.tabPage3.Controls.Add(this.rdoOppo);
+            this.tabPage3.Controls.Add(this.rdoApple);
+            this.tabPage3.Controls.Add(this.rdoSamsung);
             this.tabPage3.Controls.Add(this.QLHSXdgvDienThoai);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
@@ -816,20 +825,6 @@
             this.QLHSXdgvHangSanXuat.Size = new System.Drawing.Size(687, 543);
             this.QLHSXdgvHangSanXuat.TabIndex = 184;
             // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "ID Hãng";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 125;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Tên Hãng";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 125;
-            // 
             // btnThem1HangSanXuat
             // 
             this.btnThem1HangSanXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
@@ -843,7 +838,6 @@
             this.btnThem1HangSanXuat.Text = "    Thêm";
             this.btnThem1HangSanXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem1HangSanXuat.UseVisualStyleBackColor = true;
-            this.btnThem1HangSanXuat.Click += new System.EventHandler(this.btnThem1HangSanXuat_Click);
             // 
             // pictureBox2
             // 
@@ -855,17 +849,17 @@
             this.pictureBox2.TabIndex = 180;
             this.pictureBox2.TabStop = false;
             // 
-            // btnHuawei
+            // rdoHuawei
             // 
-            this.btnHuawei.AutoSize = true;
-            this.btnHuawei.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuawei.Location = new System.Drawing.Point(364, 106);
-            this.btnHuawei.Name = "btnHuawei";
-            this.btnHuawei.Size = new System.Drawing.Size(87, 25);
-            this.btnHuawei.TabIndex = 179;
-            this.btnHuawei.TabStop = true;
-            this.btnHuawei.Text = "Huawei";
-            this.btnHuawei.UseVisualStyleBackColor = true;
+            this.rdoHuawei.AutoSize = true;
+            this.rdoHuawei.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoHuawei.Location = new System.Drawing.Point(364, 106);
+            this.rdoHuawei.Name = "rdoHuawei";
+            this.rdoHuawei.Size = new System.Drawing.Size(87, 25);
+            this.rdoHuawei.TabIndex = 179;
+            this.rdoHuawei.TabStop = true;
+            this.rdoHuawei.Text = "Huawei";
+            this.rdoHuawei.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -888,41 +882,43 @@
             this.lbDanhSachDTTheoHang.TabIndex = 177;
             this.lbDanhSachDTTheoHang.Text = "Danh sách điện thoại theo hãng";
             // 
-            // btnOppo
+            // rdoOppo
             // 
-            this.btnOppo.AutoSize = true;
-            this.btnOppo.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOppo.Location = new System.Drawing.Point(267, 106);
-            this.btnOppo.Name = "btnOppo";
-            this.btnOppo.Size = new System.Drawing.Size(70, 25);
-            this.btnOppo.TabIndex = 176;
-            this.btnOppo.TabStop = true;
-            this.btnOppo.Text = "Oppo";
-            this.btnOppo.UseVisualStyleBackColor = true;
+            this.rdoOppo.AutoSize = true;
+            this.rdoOppo.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoOppo.Location = new System.Drawing.Point(267, 106);
+            this.rdoOppo.Name = "rdoOppo";
+            this.rdoOppo.Size = new System.Drawing.Size(70, 25);
+            this.rdoOppo.TabIndex = 176;
+            this.rdoOppo.TabStop = true;
+            this.rdoOppo.Text = "Oppo";
+            this.rdoOppo.UseVisualStyleBackColor = true;
             // 
-            // btnApple
+            // rdoApple
             // 
-            this.btnApple.AutoSize = true;
-            this.btnApple.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApple.Location = new System.Drawing.Point(157, 106);
-            this.btnApple.Name = "btnApple";
-            this.btnApple.Size = new System.Drawing.Size(73, 25);
-            this.btnApple.TabIndex = 175;
-            this.btnApple.TabStop = true;
-            this.btnApple.Text = "Apple";
-            this.btnApple.UseVisualStyleBackColor = true;
+            this.rdoApple.AutoSize = true;
+            this.rdoApple.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoApple.Location = new System.Drawing.Point(157, 106);
+            this.rdoApple.Name = "rdoApple";
+            this.rdoApple.Size = new System.Drawing.Size(73, 25);
+            this.rdoApple.TabIndex = 175;
+            this.rdoApple.TabStop = true;
+            this.rdoApple.Text = "Apple";
+            this.rdoApple.UseVisualStyleBackColor = true;
+            this.rdoApple.CheckedChanged += new System.EventHandler(this.rdoApple_CheckedChanged);
             // 
-            // btnSamsung
+            // rdoSamsung
             // 
-            this.btnSamsung.AutoSize = true;
-            this.btnSamsung.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSamsung.Location = new System.Drawing.Point(39, 106);
-            this.btnSamsung.Name = "btnSamsung";
-            this.btnSamsung.Size = new System.Drawing.Size(98, 25);
-            this.btnSamsung.TabIndex = 174;
-            this.btnSamsung.TabStop = true;
-            this.btnSamsung.Text = "Samsung";
-            this.btnSamsung.UseVisualStyleBackColor = true;
+            this.rdoSamsung.AutoSize = true;
+            this.rdoSamsung.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoSamsung.Location = new System.Drawing.Point(39, 106);
+            this.rdoSamsung.Name = "rdoSamsung";
+            this.rdoSamsung.Size = new System.Drawing.Size(98, 25);
+            this.rdoSamsung.TabIndex = 174;
+            this.rdoSamsung.TabStop = true;
+            this.rdoSamsung.Text = "Samsung";
+            this.rdoSamsung.UseVisualStyleBackColor = true;
+            this.rdoSamsung.CheckedChanged += new System.EventHandler(this.rdoSamsung_CheckedChanged);
             // 
             // QLHSXdgvDienThoai
             // 
@@ -941,7 +937,7 @@
             this.dataGridViewTextBoxColumn23,
             this.dataGridViewTextBoxColumn24,
             this.dataGridViewTextBoxColumn25});
-            this.QLHSXdgvDienThoai.Location = new System.Drawing.Point(753, 180);
+            this.QLHSXdgvDienThoai.Location = new System.Drawing.Point(746, 180);
             this.QLHSXdgvDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QLHSXdgvDienThoai.Name = "QLHSXdgvDienThoai";
             this.QLHSXdgvDienThoai.RowHeadersWidth = 51;
@@ -1052,6 +1048,43 @@
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QuanLyCHDT.Properties.Resources.RBN_Sim_800_200_800x200;
+            this.pictureBox3.Location = new System.Drawing.Point(31, 458);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(264, 98);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 184;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QuanLyCHDT.Properties.Resources.thuong_hieu_dien_thoai_768x215;
+            this.pictureBox4.Location = new System.Drawing.Point(31, 578);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(264, 101);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 185;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "idHang";
+            this.Column16.HeaderText = "ID Hãng";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 125;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "tenHang";
+            this.Column17.HeaderText = "Tên Hãng";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 125;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1082,6 +1115,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHSXdgvDienThoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1161,15 +1196,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.RadioButton btnOppo;
-        private System.Windows.Forms.RadioButton btnApple;
-        private System.Windows.Forms.RadioButton btnSamsung;
+        private System.Windows.Forms.RadioButton rdoOppo;
+        private System.Windows.Forms.RadioButton rdoApple;
+        private System.Windows.Forms.RadioButton rdoSamsung;
         private System.Windows.Forms.Label lbDanhSachDTTheoHang;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton btnHuawei;
+        private System.Windows.Forms.RadioButton rdoHuawei;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnThem1HangSanXuat;
         private System.Windows.Forms.DataGridView QLHSXdgvHangSanXuat;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
     }

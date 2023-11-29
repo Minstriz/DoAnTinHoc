@@ -8,25 +8,31 @@ namespace QuanLyCHDT
 {
     internal class CHang
     {
+        public enum HangSanXuat
+        {
+            Apple = 1,
+            Samsung = 2,
+            Oppo = 3,
+            Huawei = 4
+        }
         string idHang;
-        string idDienThoai;
+ 
         string tenHang;
 
         public string IdHang { get => idHang; set => idHang = value; }
         public string TenHang { get => tenHang; set => tenHang = value; }
-        public string IdDienThoai { get => idDienThoai; set => idDienThoai = value; }
+
 
         public CHang()
         {
             idHang = string.Empty;
             tenHang = string.Empty;
-            idDienThoai= string.Empty;
         }
-        public CHang(string idHang, string tenHang, string idDienThoai)
+        public CHang(string idHang, string tenHang)
         {
             IdHang = idHang;
             TenHang = tenHang;
-            IdDienThoai = idDienThoai;
+
         }
     }
 }

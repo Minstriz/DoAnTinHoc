@@ -73,12 +73,12 @@
             this.cbLoc.Size = new System.Drawing.Size(164, 24);
             this.cbLoc.TabIndex = 172;
             this.cbLoc.SelectedIndexChanged += new System.EventHandler(this.cbLoc_SelectedIndexChanged);
+            this.cbLoc.SelectedValueChanged += new System.EventHandler(this.Sort);
             this.cbLoc.TextChanged += new System.EventHandler(this.Sort);
             // 
             // txtLoc
             // 
             this.txtLoc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLoc.Enabled = false;
             this.txtLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoc.ForeColor = System.Drawing.Color.Black;
             this.txtLoc.Location = new System.Drawing.Point(310, 96);
