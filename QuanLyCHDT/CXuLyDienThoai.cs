@@ -19,6 +19,17 @@ namespace QuanLyCHDT
             }
             return null;
         }
+        public void timTheoHang(string radioValue, ref List<CDienThoai> DsDienThoai, ref List<CDienThoai> dsLoc)
+        {
+            foreach (CDienThoai a in DsDienThoai)
+            {
+                if (a.HangSanXuat.ToLower().Equals(radioValue.ToLower()))
+                {
+                    dsLoc.Add(a);
+                }
+
+            }
+        }
         public void tim(string comboBoxValue, string value, ref List<CDienThoai> DsDienThoai, ref List<CDienThoai> dsTim)
         {
             foreach (CDienThoai a in DsDienThoai)

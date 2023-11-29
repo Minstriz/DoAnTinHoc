@@ -56,7 +56,10 @@ namespace QuanLyCHDT
 
         private void cbLoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtLoc.Enabled = true;
+            while(cbLoc.Text == string.Empty)
+            {
+                txtLoc.Enabled = false;
+            }
             Sort(sender, e);
         }
     }
