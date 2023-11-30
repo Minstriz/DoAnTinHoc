@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.MainTab = new System.Windows.Forms.TabControl();
             this.tabQuanLySanPham = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvDienThoai = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +75,7 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtLoc = new System.Windows.Forms.TextBox();
@@ -89,6 +92,8 @@
             this.checkBoxDaThanhToan = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.QLHSXdgvHangSanXuat = new System.Windows.Forms.DataGridView();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem1HangSanXuat = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rdoHuawei = new System.Windows.Forms.RadioButton();
@@ -111,12 +116,10 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTab.SuspendLayout();
             this.tabQuanLySanPham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDienThoai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabQuanLyKhachHang.SuspendLayout();
@@ -130,8 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHSXdgvDienThoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTab
@@ -141,7 +142,7 @@
             this.MainTab.Controls.Add(this.tabQuanLyDonHang);
             this.MainTab.Controls.Add(this.tabPage3);
             this.MainTab.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainTab.Location = new System.Drawing.Point(12, -3);
+            this.MainTab.Location = new System.Drawing.Point(13, -2);
             this.MainTab.Name = "MainTab";
             this.MainTab.SelectedIndex = 0;
             this.MainTab.Size = new System.Drawing.Size(1608, 812);
@@ -166,6 +167,27 @@
             this.tabQuanLySanPham.Text = "Quản Lý Sản Phẩm";
             this.tabQuanLySanPham.UseVisualStyleBackColor = true;
             this.tabQuanLySanPham.Click += new System.EventHandler(this.tabQuanLySanPham_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QuanLyCHDT.Properties.Resources.thuong_hieu_dien_thoai_768x215;
+            this.pictureBox4.Location = new System.Drawing.Point(31, 578);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(264, 101);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 185;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QuanLyCHDT.Properties.Resources.RBN_Sim_800_200_800x200;
+            this.pictureBox3.Location = new System.Drawing.Point(31, 458);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(264, 98);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 184;
+            this.pictureBox3.TabStop = false;
             // 
             // dgvDienThoai
             // 
@@ -617,12 +639,13 @@
             this.Column12,
             this.Column13,
             this.Column15,
+            this.Column18,
             this.Column14});
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(521, 388);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
             this.dgvChiTietHoaDon.RowHeadersWidth = 51;
             this.dgvChiTietHoaDon.RowTemplate.Height = 24;
-            this.dgvChiTietHoaDon.Size = new System.Drawing.Size(1252, 387);
+            this.dgvChiTietHoaDon.Size = new System.Drawing.Size(1083, 387);
             this.dgvChiTietHoaDon.TabIndex = 178;
             // 
             // Column12
@@ -641,10 +664,17 @@
             // 
             // Column15
             // 
-            this.Column15.HeaderText = "Sản phẩm mua ";
+            this.Column15.HeaderText = "Tên sản phẩm ";
             this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.Width = 125;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "ID sản phẩm";
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 125;
             // 
             // Column14
             // 
@@ -723,7 +753,7 @@
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1325, 385);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1093, 385);
             this.dgvHoaDon.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn9
@@ -825,12 +855,28 @@
             this.QLHSXdgvHangSanXuat.Size = new System.Drawing.Size(687, 543);
             this.QLHSXdgvHangSanXuat.TabIndex = 184;
             // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "idHang";
+            this.Column16.HeaderText = "ID Hãng";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 125;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "tenHang";
+            this.Column17.HeaderText = "Tên Hãng";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 125;
+            // 
             // btnThem1HangSanXuat
             // 
             this.btnThem1HangSanXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThem1HangSanXuat.Image = global::QuanLyCHDT.Properties.Resources.icons8_add_30;
             this.btnThem1HangSanXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem1HangSanXuat.Location = new System.Drawing.Point(809, 17);
+            this.btnThem1HangSanXuat.Location = new System.Drawing.Point(841, 17);
             this.btnThem1HangSanXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem1HangSanXuat.Name = "btnThem1HangSanXuat";
             this.btnThem1HangSanXuat.Size = new System.Drawing.Size(107, 53);
@@ -848,6 +894,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 180;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // rdoHuawei
             // 
@@ -1048,43 +1095,6 @@
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QuanLyCHDT.Properties.Resources.RBN_Sim_800_200_800x200;
-            this.pictureBox3.Location = new System.Drawing.Point(31, 458);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(264, 98);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 184;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::QuanLyCHDT.Properties.Resources.thuong_hieu_dien_thoai_768x215;
-            this.pictureBox4.Location = new System.Drawing.Point(31, 578);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(264, 101);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 185;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // Column16
-            // 
-            this.Column16.DataPropertyName = "idHang";
-            this.Column16.HeaderText = "ID Hãng";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 125;
-            // 
-            // Column17
-            // 
-            this.Column17.DataPropertyName = "tenHang";
-            this.Column17.HeaderText = "Tên Hãng";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 125;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1097,6 +1107,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MainTab.ResumeLayout(false);
             this.tabQuanLySanPham.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDienThoai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabQuanLyKhachHang.ResumeLayout(false);
@@ -1115,8 +1127,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHSXdgvDienThoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1178,10 +1188,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dgvChiTietHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView QLHSXdgvDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
@@ -1207,6 +1213,11 @@
         private System.Windows.Forms.DataGridView QLHSXdgvHangSanXuat;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
     }

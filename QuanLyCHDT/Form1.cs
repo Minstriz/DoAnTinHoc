@@ -394,6 +394,11 @@ namespace QuanLyCHDT
 
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void btnSua_Click(object sender, EventArgs e)
         //{
         //    frmNhapDienThoai frm = new frmNhapDienThoai();
