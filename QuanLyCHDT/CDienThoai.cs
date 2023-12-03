@@ -13,11 +13,10 @@ using System.Windows.Forms;
 namespace QuanLyCHDT
 {
     [Serializable]
-    class CDienThoai
+    class CDienThoai:CHang
     {
-        //test push
         private string m_idSanPham;
-        private string m_idHang; //1 apple, 2 samsung, 3 oppo, 4 huawei
+        private string m_idHang; 
         private string m_tenDienThoai;
         private string m_hangSanXuat;
         private string m_heDieuHanh;
@@ -35,7 +34,7 @@ namespace QuanLyCHDT
             IdSanPham = "";
             IdHang = "";
             TenDienThoai = "";
-            HangSanXuat = "";
+            //HangSanXuat = "";
             HeDieuHanh = "";
             ManHinh = "";
             Chip = "";
@@ -65,7 +64,6 @@ namespace QuanLyCHDT
 
         public string IdSanPham { get => m_idSanPham; set => m_idSanPham = value; }
         public string TenDienThoai { get => m_tenDienThoai; set => m_tenDienThoai = value; }
-        public string HangSanXuat { get => m_hangSanXuat; set => m_hangSanXuat = value; }
         public string HeDieuHanh { get => m_heDieuHanh; set => m_heDieuHanh = value; }
         public string ManHinh { get => m_manHinh; set => m_manHinh = value; }
         public string Chip { get => m_chip; set => m_chip = value; }

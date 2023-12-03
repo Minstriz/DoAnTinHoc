@@ -15,8 +15,8 @@ namespace QuanLyCHDT
         DateTime m_ngayThangNamSinh;
         string m_soDienThoai;
         string m_diaChiEmail;
-        string m_taiKhoan;
-        string m_matKhau;
+        //string m_taiKhoan;
+        //string m_matKhau;
 
         public string MaKhachHang { get => m_maKhachHang; set => m_maKhachHang = value; }
         public string TenKhachHang { get => m_tenKhachHang; set => m_tenKhachHang = value; }
@@ -24,8 +24,8 @@ namespace QuanLyCHDT
         public string SoDienThoai { get => m_soDienThoai; set => m_soDienThoai = value; }
         public string DiaChiEmail { get => m_diaChiEmail; set => m_diaChiEmail = value; }
         public string Phai { get => m_phai; set => m_phai = value; }
-        public string TaiKhoan { get => m_taiKhoan; set => m_taiKhoan = value; }
-        public string MatKhau { get => m_matKhau; set => m_matKhau = value; }
+        //public string TaiKhoan { get => m_taiKhoan; set => m_taiKhoan = value; }
+        //public string MatKhau { get => m_matKhau; set => m_matKhau = value; }
 
         public CKhachHang() {
             m_maKhachHang = "";
@@ -33,8 +33,8 @@ namespace QuanLyCHDT
             m_ngayThangNamSinh = DateTime.Now;
             m_diaChiEmail = "";
             m_phai = ""; //default: nam
-            m_taiKhoan = "";
-            m_matKhau = "";
+            //m_taiKhoan = "";
+            //m_matKhau = "";
         }
         public CKhachHang(string maKhachHang, string tenKhachHang, DateTime NgayThangNamSinh, string SoDienThoai, String DiaChiEmail, string Phai)
         {
@@ -44,8 +44,8 @@ namespace QuanLyCHDT
             m_phai= Phai;
             m_diaChiEmail= DiaChiEmail;
             m_ngayThangNamSinh= NgayThangNamSinh;
-            m_taiKhoan = TaiKhoan;
-            m_matKhau = MatKhau;
+            //m_taiKhoan = TaiKhoan;
+            //m_matKhau = MatKhau;
         }
 
     }

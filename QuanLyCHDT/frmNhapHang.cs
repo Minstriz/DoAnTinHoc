@@ -13,6 +13,7 @@ namespace QuanLyCHDT
     public partial class frmNhapHang : Form
     {
         List<CHang> dsHang = new List<CHang>();
+        CTruyXuatDuLieuHangSanXuat truyxuat = new CTruyXuatDuLieuHangSanXuat();
         public frmNhapHang()
         {
             InitializeComponent();
@@ -28,8 +29,9 @@ namespace QuanLyCHDT
         }
         private void frmNhapHang_Load(object sender, EventArgs e)
         {
-
+            truyxuat.docFile("QLDSHSX.txt", ref dsHang);
         }
+
         public void Them1hangSanXuat()
         {
             CHang c = new CHang();
@@ -47,7 +49,18 @@ namespace QuanLyCHDT
         }
         private void btnThem1HangSanXuat_Click(object sender, EventArgs e)
         {
+            Them1hangSanXuat();
+            if (truyxuat.ghiFile("QLDSHSX.txt", ref dsHang) == true)
+            {
+                //MessageBox.Show("Thêm thành công", "Thông báo");
+            }
+            else MessageBox.Show("Ghi file không thành công", "Thông báo");
+        }
 
+        private void btnThoat1HangSanXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
         }
     }
 }

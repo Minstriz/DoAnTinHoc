@@ -51,11 +51,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.txtRom = new System.Windows.Forms.TextBox();
             this.txtRam = new System.Windows.Forms.TextBox();
-            this.txtHang = new System.Windows.Forms.TextBox();
             this.txtTenDienThoai = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbHangSanXuat = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -305,15 +305,6 @@
             this.txtRam.Size = new System.Drawing.Size(262, 22);
             this.txtRam.TabIndex = 7;
             // 
-            // txtHang
-            // 
-            this.txtHang.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtHang.Location = new System.Drawing.Point(172, 197);
-            this.txtHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHang.Name = "txtHang";
-            this.txtHang.Size = new System.Drawing.Size(243, 22);
-            this.txtHang.TabIndex = 3;
-            // 
             // txtTenDienThoai
             // 
             this.txtTenDienThoai.BackColor = System.Drawing.Color.FloralWhite;
@@ -355,11 +346,20 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Nhập thông tin điện thoại";
             // 
+            // cbHangSanXuat
+            // 
+            this.cbHangSanXuat.FormattingEnabled = true;
+            this.cbHangSanXuat.Location = new System.Drawing.Point(172, 200);
+            this.cbHangSanXuat.Name = "cbHangSanXuat";
+            this.cbHangSanXuat.Size = new System.Drawing.Size(243, 24);
+            this.cbHangSanXuat.TabIndex = 199;
+            // 
             // frmNhapDienThoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 462);
+            this.Controls.Add(this.cbHangSanXuat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSoLuongNhap);
             this.Controls.Add(this.txtGiaNhap);
@@ -384,7 +384,6 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txtRom);
             this.Controls.Add(this.txtRam);
-            this.Controls.Add(this.txtHang);
             this.Controls.Add(this.txtTenDienThoai);
             this.Controls.Add(this.btnThoat);
             this.Name = "frmNhapDienThoai";
@@ -421,10 +420,10 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtRom;
         private System.Windows.Forms.TextBox txtRam;
-        private System.Windows.Forms.TextBox txtHang;
         private System.Windows.Forms.TextBox txtTenDienThoai;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbHangSanXuat;
     }
 }

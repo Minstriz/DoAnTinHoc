@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace QuanLyCHDT
 {
+    [Serializable]
     internal class CHang
     {
+        
         public enum HangSanXuat
         {
             Apple = 1,
@@ -15,12 +17,13 @@ namespace QuanLyCHDT
             Oppo = 3,
             Huawei = 4
         }
-        string idHang;
+        private string idHang;
  
-        string tenHang;
+        private string tenHang;
 
         public string IdHang { get => idHang; set => idHang = value; }
         public string TenHang { get => tenHang; set => tenHang = value; }
+        public string HangSanXuat { get => m_hangSanXuat; set => m_hangSanXuat = value; }
 
 
         public CHang()
