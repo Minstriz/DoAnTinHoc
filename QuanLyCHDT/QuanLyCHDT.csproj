@@ -53,6 +53,7 @@
     <Compile Include="CHoaDon.cs" />
     <Compile Include="CKhanhHang.cs" />
     <Compile Include="CThongTinTaiKhoan.cs" />
+    <Compile Include="CTruyXuatDuLieuHangSanXuat.cs" />
     <Compile Include="CTruyXuatTaiKhoan.cs" />
     <Compile Include="CXuLyDienThoai.cs" />
     <Compile Include="CTruyXuatDuLieuDienThoai.cs" />

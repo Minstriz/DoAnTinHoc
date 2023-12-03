@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,17 +20,24 @@ namespace QuanLyCHDT
         private List<CDienThoai> DsDienThoai = new List<CDienThoai>();
         private List<CDienThoai> DsTemp = new List<CDienThoai>();
         private List<CKhachHang> dskh = new List<CKhachHang>();
+        private List<CHang> dsHang = new List<CHang>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
         private CTruyXuatDuLieuKhachHang txkh =  new CTruyXuatDuLieuKhachHang();
         private CXuLyDienThoai xuly = new CXuLyDienThoai();
         private CTruyXuatDuLieuDienThoai txdt = new CTruyXuatDuLieuDienThoai();
+        private CTruyXuatDuLieuHangSanXuat txhsx = new CTruyXuatDuLieuHangSanXuat();
         string radioValue;
         int indexClick = -1;
+
+
+
+
         private void hienThi()
         {
             dgvDienThoai.DataSource = DsDienThoai.ToList();
             dgvKhachHang.DataSource = dskh.ToList();
             QLHSXdgvDienThoai.DataSource = DsDienThoai.ToList();
+            QLHSXdgvHangSanXuat.DataSource = dsHang.ToList();
         }
         public FormMain()
         {
@@ -50,6 +58,10 @@ namespace QuanLyCHDT
                 //MessageBox.Show("đã đọc được dữ liệu!", "Thông báo");
             }
             else MessageBox.Show("không đọc được dữ liệu khách hàng", "Thông báo");
+            if(txhsx.docFile("QLDSHSX.txt", ref dsHang) == true) {
+                hienThi();
+            }
+            else MessageBox.Show("không đọc được dữ liệu danh sách hãng", "Thông báo");
 
         }
 
@@ -60,10 +72,6 @@ namespace QuanLyCHDT
                 Close();
             }
         }
-        private void btnSaveFle_Click(object sender, EventArgs e)
-        {
-            
-        }
 
 
         private void btnThem1DienThoai_Click(object sender, EventArgs e)
@@ -73,25 +81,13 @@ namespace QuanLyCHDT
             this.Hide();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Show(string v1, string v2)
         {
             throw new NotImplementedException();
         }
 
-        private void btnLoc_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnThem1DienThoai_Click_1(object sender, EventArgs e)
         {
             frmNhapDienThoai frm = new frmNhapDienThoai();
@@ -168,10 +164,6 @@ namespace QuanLyCHDT
             }
         }
 
-        private void tabQuanLyKhachHang_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cbLoc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -183,35 +175,25 @@ namespace QuanLyCHDT
         private void locTheoHang()
         {
             List<CDienThoai> dsLocHang = new List<CDienThoai>();
-            List<CHang> dsHang = new List<CHang>();
-
-            // Lấy thông tin hãng được chọn
-            CHang hangDuocChon = new CHang();
-            if (rdoApple.Checked == true)
+            for (int i = 0; i < QLHSXdgvHangSanXuat.SelectedCells.Count; i++)
             {
-                hangDuocChon.IdHang = HangSanXuat.Apple.ToString();
-                hangDuocChon.TenHang = "Apple";
-            }
-            else if (rdoSamsung.Checked == true)
-            {
-                hangDuocChon.IdHang = HangSanXuat.Samsung.ToString();
-                hangDuocChon.TenHang = "Samsung";
-            }
-
-            // Lọc danh sách sản phẩm
-            foreach (CDienThoai a in DsDienThoai)
-            {
-                if (a.HangSanXuat == hangDuocChon.IdHang)
+                // Lấy thông tin hãng được chọn
+                if (QLHSXdgvHangSanXuat.SelectedCells[i].RowIndex >= 0)
                 {
-                    dsLocHang.Add(a);
+                    string TenHangDuocChon = (QLHSXdgvHangSanXuat.SelectedCells[i].Value.ToString());
+                    foreach (CDienThoai a in DsDienThoai)
+                    {
+                        if (a.HangSanXuat == TenHangDuocChon)
+                        {
+                            dsLocHang.Add(a);
+                        }
+                    }
                 }
             }
-            dsHang.Add(hangDuocChon);
+            // Lọc danh sách sản phẩm
             // Cập nhật dữ liệu cho DataGridView
             QLHSXdgvDienThoai.DataSource = dsLocHang.ToList();
-            QLHSXdgvHangSanXuat.DataSource = dsHang.ToList();
             dsLocHang.Clear();
-            dsHang.Clear();
         }
         private void LocDSKH()
         {
@@ -284,26 +266,6 @@ namespace QuanLyCHDT
                     }
                     break;
 
-                case 6:
-                    foreach (CKhachHang kh in dskh)
-                    {
-                        if (kh.TaiKhoan.ToUpper().Contains(txtLocKhachHang.Text.ToUpper()))
-                        {
-                            dsLoc.Add(kh);
-                        }
-                    }
-                    break;
-
-                case 7:
-                    foreach (CKhachHang kh in dskh)
-                    {
-                        if (kh.MatKhau.ToUpper().Contains(txtLocKhachHang.Text.ToUpper()))
-                        {
-                            dsLoc.Add(kh);
-                        }
-                    }
-                    break;
-
             }
             dgvKhachHang.DataSource = dsLoc.ToList();
         }
@@ -338,39 +300,12 @@ namespace QuanLyCHDT
         {
             txtLocKhachHang.SelectAll();
             lbTxtNhapDuLieuTimKiem.Visible = false;
-
         }
 
         private void txtLocKhachHang_TextChanged(object sender, EventArgs e)
         {
             LocDSKH();
         }
-
-        private void dgvDienThoai_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //Lấy chỉ mục khi click vào row
-            int index = dgvDienThoai.Rows[e.RowIndex].Index;
-            List<CDienThoai> detail = new List<CDienThoai>();
-            try
-            {
-                //Tạo 1 danh sách ảo với phần tử là phần được đc click  và lưu vào file
-             
-                detail.Add(DsTemp[index]);
-                //Ghi dữ liệu vào file
-                FileStream fs = new FileStream("QLDSDTCT.txt", FileMode.OpenOrCreate);
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(fs, detail);
-                fs.Close();
-                //Gọi form thông tin chi tiết
-                frmProductDetail frm = new frmProductDetail();
-                frm.ShowDialog();
-            }
-            catch
-            {
-                MessageBox.Show("Không Thể Lưu");
-            }
-        }
-
         private void dgvDienThoai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dgvDienThoai.Rows.Count)
@@ -378,33 +313,48 @@ namespace QuanLyCHDT
                 indexClick = e.RowIndex;
             }
         }
+        private void btnThem1HangSanXuat_Click(object sender, EventArgs e)
+        {
+            frmNhapHang  frm  = new frmNhapHang();
+            frm.Show();
+        }
 
-        private void tabQuanLySanPham_Click(object sender, EventArgs e)
+        private void cbHangSanXuat_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void pushComboboxHangSanXuat()
+        {
+            
+        }
+        private void QLHSXdgvHangSanXuat_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            pushComboboxHangSanXuat();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
-    
+
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void QLHSXdgvHangSanXuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void QLHSXdgvHangSanXuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            locTheoHang();
         }
 
-        //private void btnSua_Click(object sender, EventArgs e)
-        //{
-        //    frmNhapDienThoai frm = new frmNhapDienThoai();
-        //    frm.doiTen();
-        //    frm.Show();
-        //    this.Hide();
-        //}
+        private void QLHSXdgvHangSanXuat_Click(object sender, EventArgs e)
+        {
+            locTheoHang();
+        }
+
+        private void QLHSXdgvHangSanXuat_CellValueNeeded(object sender, DataGridViewCellValueEventArgs e)
+        {
+            locTheoHang();
+        }
     }
 }

@@ -15,7 +15,9 @@ namespace QuanLyCHDT
     public partial class frmNhapDienThoai : Form
     {
         private List<CDienThoai> DsDienThoai = new List<CDienThoai>();
+        private List<CHang> DsHang = new List<CHang>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
+        private CTruyXuatDuLieuHangSanXuat truyxuathang  = new CTruyXuatDuLieuHangSanXuat();
         //private CXuLyDienThoai xuly = new CXuLyDienThoai();
         public frmNhapDienThoai()
         {
@@ -35,7 +37,7 @@ namespace QuanLyCHDT
             CDienThoai dt = new CDienThoai();
             dt.IdSanPham = txtIDSanPham.Text;
             dt.TenDienThoai = txtTenDienThoai.Text;
-            dt.HangSanXuat = txtHang.Text;
+            dt.HangSanXuat = cbHangSanXuat.Text;
             dt.HeDieuHanh = txtHeDieuHanh.Text;
             dt.ManHinh = txtManHinh.Text;
             dt.Chip = txtChip.Text;
@@ -71,7 +73,13 @@ namespace QuanLyCHDT
             FormMain frm = new FormMain();
             frm.Show();
         }
-
+        private void updateComboboxHangSanXuat()
+        {
+            foreach(CHang c in DsHang)
+            {
+                cbHangSanXuat.Items.Add(c.TenHang);
+            }
+        }
         private void frmNhapDienThoai_Load(object sender, EventArgs e)
         {
             if (truyxuat.docFile("QLDSDT.txt", ref DsDienThoai) == true)
@@ -83,6 +91,15 @@ namespace QuanLyCHDT
             {
                 MessageBox.Show("không đọc được dữ liệu", "Thông báo");
             }
+            if (truyxuathang.docFile("QLDSHSX.txt",ref DsHang) == true)
+            {
+                ///MessageBox.Show("đã đọc được dữ liệu hãng!", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("không đọc được dữ liệu", "Thông báo");
+            }
+            updateComboboxHangSanXuat();
         }
 
 

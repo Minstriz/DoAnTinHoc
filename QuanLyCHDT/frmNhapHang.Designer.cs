@@ -91,6 +91,7 @@
             this.btnThoat1HangSanXuat.TabIndex = 232;
             this.btnThoat1HangSanXuat.Text = "Thoát";
             this.btnThoat1HangSanXuat.UseVisualStyleBackColor = true;
+            this.btnThoat1HangSanXuat.Click += new System.EventHandler(this.btnThoat1HangSanXuat_Click);
             // 
             // lbHang
             // 
