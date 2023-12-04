@@ -73,7 +73,6 @@ namespace QuanLyCHDT
             {
                 if (dskh.Any(kh => kh.MaKhachHang == khCanSua.MaKhachHang))
                 {
-
                     khCanSua.MaKhachHang = txtMaKhachHang.Text;
                     khCanSua.TenKhachHang = txtTenKhachHang.Text;
                     khCanSua.NgayThangNamSinh = dateTimePicker1.Value;
@@ -87,7 +86,6 @@ namespace QuanLyCHDT
                     {
                         khCanSua.Phai = "Nữ";
                     }
-
                 }
             }
         }

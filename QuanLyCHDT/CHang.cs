@@ -10,21 +10,12 @@ namespace QuanLyCHDT
     internal class CHang
     {
         
-        public enum HangSanXuat
-        {
-            Apple = 1,
-            Samsung = 2,
-            Oppo = 3,
-            Huawei = 4
-        }
         private string idHang;
  
         private string tenHang;
 
         public string IdHang { get => idHang; set => idHang = value; }
         public string TenHang { get => tenHang; set => tenHang = value; }
-        public string HangSanXuat { get => m_hangSanXuat; set => m_hangSanXuat = value; }
-
 
         public CHang()
         {

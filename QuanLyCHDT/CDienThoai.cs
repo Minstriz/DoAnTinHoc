@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace QuanLyCHDT
 {
     [Serializable]
-    class CDienThoai:CHang
+    class CDienThoai
     {
         private string m_idSanPham;
         private string m_idHang; 
@@ -34,7 +34,7 @@ namespace QuanLyCHDT
             IdSanPham = "";
             IdHang = "";
             TenDienThoai = "";
-            //HangSanXuat = "";
+            HangSanXuat = "";
             HeDieuHanh = "";
             ManHinh = "";
             Chip = "";
@@ -73,6 +73,7 @@ namespace QuanLyCHDT
         public string GiaNhap { get => m_giaNhap; set => m_giaNhap = value; }
         public string GiaBan { get => m_giaBan; set => m_giaBan = value; }
         public string SoLuongNhap { get => m_soLuongNhap; set => m_soLuongNhap = value; }
-        public string IdHang { get => m_idHang; set => m_idHang = value; }
+        public new string IdHang { get => m_idHang; set => m_idHang = value; }
+        public string HangSanXuat { get => m_hangSanXuat; set => m_hangSanXuat = value; }
     }
 }
