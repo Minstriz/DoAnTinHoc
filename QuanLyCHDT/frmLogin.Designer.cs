@@ -76,6 +76,7 @@
             this.btnDangKy.TabIndex = 3;
             this.btnDangKy.Text = "Đăng Ký";
             this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Visible = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // btnDangNhap
@@ -94,6 +95,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(142, 145);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(288, 22);
             this.txtMatKhau.TabIndex = 1;
             // 
