@@ -57,6 +57,19 @@ namespace QuanLyCHDT
             {
                 MessageBox.Show("ID " + dt.IdSanPham + " đã tồn tại", "thông báo");
             }
+            txtIDSanPham.Clear();
+            txtTenDienThoai.Clear();
+            cbHangSanXuat = null;
+            txtHeDieuHanh.Clear();
+            txtManHinh.Clear();
+            txtChip.Clear();
+            txtGiaNhap.Clear();
+            txtGiaBan.Clear();
+            txtRom.Clear();
+            txtRam.Clear();
+            txtSoLuongNhap.Clear();
+            txtPin.Clear();
+            txtIDSanPham.Focus();
         }
         private void btnThem1DienThoai_Click(object sender, EventArgs e)
         {                                                                                                       

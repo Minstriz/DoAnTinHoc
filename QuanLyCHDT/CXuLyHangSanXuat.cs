@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyCHDT
 {
@@ -18,5 +19,15 @@ namespace QuanLyCHDT
             }
             return null;
         }
+        public CHang TimTenHang(string ten, List<CHang> dsHang)
+        {
+            foreach (CHang k in dsHang)
+            {
+                if (k.TenHang == ten)
+                    return k;
+            }
+            return null;
+        }
+        
     }
 }

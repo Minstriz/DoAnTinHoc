@@ -234,11 +234,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label5.Location = new System.Drawing.Point(327, 19);
+            this.label5.Location = new System.Drawing.Point(326, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 35);
+            this.label5.Size = new System.Drawing.Size(181, 35);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Tìm điện thoại";
+            this.label5.Text = "Lọc sản phẩm";
             // 
             // frmLoc
             // 

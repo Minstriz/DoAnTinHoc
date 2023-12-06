@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
@@ -46,6 +47,8 @@ namespace QuanLyCHDT
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Kích hoạt tính năng tự động thay đổi kích thước cửa sổ
+            this.AutoSize = true;
             if (truyxuat.docFile("QLDSDT.txt", ref DsDienThoai) == true)
             {
                 hienThi();
@@ -64,13 +67,16 @@ namespace QuanLyCHDT
             }
             else MessageBox.Show("không đọc được dữ liệu danh sách hãng", "Thông báo");
             txhsx.docFile("QLDSHSX.txt", ref dsHang);
-
+            updateComboboxHangSanXuatMainView();
         }
-
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void updateComboboxHangSanXuatMainView()
         {
-
+            foreach (CHang c in dsHang)
+            {
+                cbHangSanXuat.Items.Add(c.TenHang);
+            }
         }
+
         private void btnThem1DienThoai_Click(object sender, EventArgs e)
         {
             frmNhapDienThoai frm  = new frmNhapDienThoai();
@@ -259,12 +265,10 @@ namespace QuanLyCHDT
         }
         private void btnSoSanh_Click(object sender, EventArgs e)
         {
+            frmSoSanh frm = new frmSoSanh();
+            frm.ShowDialog();
+        }
 
-        }
-        private void btnSua1KhachHang_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void txtLocKhachHang_MouseClick(object sender, MouseEventArgs e)
         {
@@ -324,6 +328,7 @@ namespace QuanLyCHDT
                 txtIDHang.Clear();
                 txtTenHang.Clear();
                 txtIDHang.Focus();
+                
             }
         }
 
@@ -333,20 +338,7 @@ namespace QuanLyCHDT
             locTheoHang();
         }
 
-        private void QLHSXdgvHangSanXuat_Click(object sender, EventArgs e)
-        {
-            locTheoHang();
-        }
 
-        private void QLHSXdgvHangSanXuat_CellValueNeeded(object sender, DataGridViewCellValueEventArgs e)
-        {
-            locTheoHang();
-        }
-
-        private void QuanLyHangSanXuat_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnXoaHSX_Click(object sender, EventArgs e)
         {
@@ -465,6 +457,16 @@ namespace QuanLyCHDT
         private void btnThem1HSX_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void tabQuanLySanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat1KhachHang_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

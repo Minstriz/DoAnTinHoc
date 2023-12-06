@@ -31,7 +31,6 @@
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnDangKy = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,24 +65,11 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "LOGIN";
             // 
-            // btnDangKy
-            // 
-            this.btnDangKy.BackColor = System.Drawing.Color.Bisque;
-            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(307, 195);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(123, 40);
-            this.btnDangKy.TabIndex = 3;
-            this.btnDangKy.Text = "Đăng Ký";
-            this.btnDangKy.UseVisualStyleBackColor = false;
-            this.btnDangKy.Visible = false;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.Bisque;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(142, 195);
+            this.btnDangNhap.Location = new System.Drawing.Point(197, 197);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(123, 40);
             this.btnDangNhap.TabIndex = 2;
@@ -127,13 +113,13 @@
             this.ClientSize = new System.Drawing.Size(486, 262);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -146,7 +132,6 @@
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label3;
