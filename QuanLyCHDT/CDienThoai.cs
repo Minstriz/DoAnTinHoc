@@ -73,7 +73,7 @@ namespace QuanLyCHDT
         public string GiaNhap { get => m_giaNhap; set => m_giaNhap = value; }
         public string GiaBan { get => m_giaBan; set => m_giaBan = value; }
         public string SoLuongNhap { get => m_soLuongNhap; set => m_soLuongNhap = value; }
-        public new string IdHang { get => m_idHang; set => m_idHang = value; }
+        public string IdHang { get => m_idHang; set => m_idHang = value; }
         public string HangSanXuat { get => m_hangSanXuat; set => m_hangSanXuat = value; }
     }
 }

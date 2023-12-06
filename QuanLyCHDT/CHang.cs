@@ -26,7 +26,6 @@ namespace QuanLyCHDT
         {
             IdHang = idHang;
             TenHang = tenHang;
-
         }
     }
 }

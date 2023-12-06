@@ -16,7 +16,6 @@ namespace QuanLyCHDT
         private List<CDienThoai> DsDienThoai = new List<CDienThoai>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
         CDienThoai currentDienThoai = null;
-        CDienThoai currentDienThoai2 = null;
         public frmSoSanh()
         {
             InitializeComponent();
@@ -45,18 +44,25 @@ namespace QuanLyCHDT
 
         private void btnSanPhamSoSanh1_Click(object sender, EventArgs e)
         {
-            txtIDSanPham.Text = currentDienThoai.IdSanPham.ToString();
-            txtTenDienThoai.Text = currentDienThoai.TenDienThoai.ToString();
-            txtHangSanXuat.Text = currentDienThoai.HangSanXuat.ToString();
-            txtHeDieuHanh.Text = currentDienThoai.HeDieuHanh.ToString();
-            txtManHinh.Text = currentDienThoai.ManHinh.ToString();
-            txtChip.Text = currentDienThoai.Chip.ToString();
-            txtRam.Text = currentDienThoai.Ram.ToString();
-            txtRom.Text = currentDienThoai.Rom.ToString();
-            txtPin.Text = currentDienThoai.Pin.ToString();
-            txtSoLuongNhap.Text = currentDienThoai.SoLuongNhap.ToString();
-            txtGiaBan.Text = currentDienThoai.GiaBan.ToString();
-            txtGiaNhap.Text = currentDienThoai.GiaNhap.ToString();
+            if (currentDienThoai != null)
+            {
+                txtIDSanPham.Text = currentDienThoai.IdSanPham.ToString();
+                txtTenDienThoai.Text = currentDienThoai.TenDienThoai.ToString();
+                txtHangSanXuat.Text = currentDienThoai.HangSanXuat.ToString();
+                txtHeDieuHanh.Text = currentDienThoai.HeDieuHanh.ToString();
+                txtManHinh.Text = currentDienThoai.ManHinh.ToString();
+                txtChip.Text = currentDienThoai.Chip.ToString();
+                txtRam.Text = currentDienThoai.Ram.ToString();
+                txtRom.Text = currentDienThoai.Rom.ToString();
+                txtPin.Text = currentDienThoai.Pin.ToString();
+                txtSoLuongNhap.Text = currentDienThoai.SoLuongNhap.ToString();
+                txtGiaBan.Text = currentDienThoai.GiaBan.ToString();
+                txtGiaNhap.Text = currentDienThoai.GiaNhap.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm để so sánh!");
+            }
         }
 
         private void btnXoaSanPhamSoSanh1_Click(object sender, EventArgs e)
@@ -77,18 +83,25 @@ namespace QuanLyCHDT
 
         private void brnSanPhamSoSanh2_Click(object sender, EventArgs e)
         {
-            txtId2.Text = currentDienThoai.IdSanPham.ToString();
-            txtTen2.Text = currentDienThoai.TenDienThoai.ToString();
-            txtHang2.Text = currentDienThoai.HangSanXuat.ToString();
-            txtHeDieuHanh2.Text = currentDienThoai.HeDieuHanh.ToString();
-            txtManHinh2.Text = currentDienThoai.ManHinh.ToString();
-            txtChip2.Text = currentDienThoai.Chip.ToString();
-            txtRam2.Text = currentDienThoai.Ram.ToString();
-            txtRom2.Text = currentDienThoai.Rom.ToString();
-            txtPin2.Text = currentDienThoai.Pin.ToString();
-            txtSoLuongNhap2.Text = currentDienThoai.SoLuongNhap.ToString();
-            txtGiaBan2.Text = currentDienThoai.GiaBan.ToString();
-            txtGiaNhap2.Text = currentDienThoai.GiaNhap.ToString();
+            if (currentDienThoai != null)
+            {
+                txtId2.Text = currentDienThoai.IdSanPham.ToString();
+                txtTen2.Text = currentDienThoai.TenDienThoai.ToString();
+                txtHang2.Text = currentDienThoai.HangSanXuat.ToString();
+                txtHeDieuHanh2.Text = currentDienThoai.HeDieuHanh.ToString();
+                txtManHinh2.Text = currentDienThoai.ManHinh.ToString();
+                txtChip2.Text = currentDienThoai.Chip.ToString();
+                txtRam2.Text = currentDienThoai.Ram.ToString();
+                txtRom2.Text = currentDienThoai.Rom.ToString();
+                txtPin2.Text = currentDienThoai.Pin.ToString();
+                txtSoLuongNhap2.Text = currentDienThoai.SoLuongNhap.ToString();
+                txtGiaBan2.Text = currentDienThoai.GiaBan.ToString();
+                txtGiaNhap2.Text = currentDienThoai.GiaNhap.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm để so sánh!");
+            }
         }
 
         private void btnXoaSanPham2_Click(object sender, EventArgs e)

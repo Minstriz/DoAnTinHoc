@@ -347,7 +347,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(15, 456);
+            this.label14.Location = new System.Drawing.Point(19, 456);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 24);
             this.label14.TabIndex = 222;
@@ -371,7 +371,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(51, 498);
+            this.label15.Location = new System.Drawing.Point(19, 498);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 24);
             this.label15.TabIndex = 223;
@@ -383,7 +383,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(25, 230);
+            this.label23.Location = new System.Drawing.Point(19, 230);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(49, 24);
             this.label23.TabIndex = 215;
@@ -395,7 +395,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(62, 540);
+            this.label16.Location = new System.Drawing.Point(19, 540);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 24);
             this.label16.TabIndex = 224;
@@ -407,7 +407,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(25, 272);
+            this.label22.Location = new System.Drawing.Point(19, 272);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(50, 24);
             this.label22.TabIndex = 216;
@@ -419,7 +419,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(26, 408);
+            this.label17.Location = new System.Drawing.Point(19, 408);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(37, 24);
             this.label17.TabIndex = 221;
@@ -463,7 +463,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(26, 360);
+            this.label5.Location = new System.Drawing.Point(19, 360);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 24);
             this.label5.TabIndex = 220;
@@ -507,7 +507,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(25, 318);
+            this.label6.Location = new System.Drawing.Point(19, 318);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 24);
             this.label6.TabIndex = 219;
@@ -563,10 +563,10 @@
             // 
             this.txtHang2.BackColor = System.Drawing.Color.FloralWhite;
             this.txtHang2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHang2.Location = new System.Drawing.Point(157, 131);
+            this.txtHang2.Location = new System.Drawing.Point(155, 131);
             this.txtHang2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHang2.Name = "txtHang2";
-            this.txtHang2.Size = new System.Drawing.Size(242, 34);
+            this.txtHang2.Size = new System.Drawing.Size(244, 34);
             this.txtHang2.TabIndex = 225;
             // 
             // txtTen2
@@ -576,7 +576,7 @@
             this.txtTen2.Location = new System.Drawing.Point(155, 89);
             this.txtTen2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen2.Name = "txtTen2";
-            this.txtTen2.Size = new System.Drawing.Size(242, 34);
+            this.txtTen2.Size = new System.Drawing.Size(244, 34);
             this.txtTen2.TabIndex = 201;
             // 
             // txtSoLuongNhap2
@@ -586,7 +586,7 @@
             this.txtSoLuongNhap2.Location = new System.Drawing.Point(155, 452);
             this.txtSoLuongNhap2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoLuongNhap2.Name = "txtSoLuongNhap2";
-            this.txtSoLuongNhap2.Size = new System.Drawing.Size(242, 34);
+            this.txtSoLuongNhap2.Size = new System.Drawing.Size(244, 34);
             this.txtSoLuongNhap2.TabIndex = 208;
             // 
             // txtRam2
@@ -596,7 +596,7 @@
             this.txtRam2.Location = new System.Drawing.Point(155, 226);
             this.txtRam2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRam2.Name = "txtRam2";
-            this.txtRam2.Size = new System.Drawing.Size(242, 34);
+            this.txtRam2.Size = new System.Drawing.Size(244, 34);
             this.txtRam2.TabIndex = 205;
             // 
             // txtGiaNhap2
@@ -606,7 +606,7 @@
             this.txtGiaNhap2.Location = new System.Drawing.Point(155, 499);
             this.txtGiaNhap2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaNhap2.Name = "txtGiaNhap2";
-            this.txtGiaNhap2.Size = new System.Drawing.Size(242, 34);
+            this.txtGiaNhap2.Size = new System.Drawing.Size(244, 34);
             this.txtGiaNhap2.TabIndex = 209;
             // 
             // txtRom2
@@ -616,7 +616,7 @@
             this.txtRom2.Location = new System.Drawing.Point(155, 268);
             this.txtRom2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRom2.Name = "txtRom2";
-            this.txtRom2.Size = new System.Drawing.Size(242, 34);
+            this.txtRom2.Size = new System.Drawing.Size(244, 34);
             this.txtRom2.TabIndex = 206;
             // 
             // txtGiaBan2
@@ -626,7 +626,7 @@
             this.txtGiaBan2.Location = new System.Drawing.Point(157, 545);
             this.txtGiaBan2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaBan2.Name = "txtGiaBan2";
-            this.txtGiaBan2.Size = new System.Drawing.Size(242, 34);
+            this.txtGiaBan2.Size = new System.Drawing.Size(244, 34);
             this.txtGiaBan2.TabIndex = 210;
             // 
             // label1
@@ -647,7 +647,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(15, 456);
+            this.label2.Location = new System.Drawing.Point(19, 456);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 24);
             this.label2.TabIndex = 222;
@@ -659,7 +659,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(50, 135);
+            this.label3.Location = new System.Drawing.Point(19, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 24);
             this.label3.TabIndex = 214;
@@ -671,7 +671,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(51, 498);
+            this.label4.Location = new System.Drawing.Point(19, 498);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 24);
             this.label4.TabIndex = 223;
@@ -683,7 +683,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(51, 230);
+            this.label11.Location = new System.Drawing.Point(19, 230);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 24);
             this.label11.TabIndex = 215;
@@ -695,7 +695,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(62, 540);
+            this.label12.Location = new System.Drawing.Point(19, 540);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 24);
             this.label12.TabIndex = 224;
@@ -707,7 +707,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(50, 272);
+            this.label13.Location = new System.Drawing.Point(19, 272);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 24);
             this.label13.TabIndex = 216;
@@ -719,7 +719,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(62, 408);
+            this.label18.Location = new System.Drawing.Point(19, 408);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(37, 24);
             this.label18.TabIndex = 221;
@@ -732,7 +732,7 @@
             this.txtId2.Location = new System.Drawing.Point(155, 46);
             this.txtId2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId2.Name = "txtId2";
-            this.txtId2.Size = new System.Drawing.Size(242, 34);
+            this.txtId2.Size = new System.Drawing.Size(244, 34);
             this.txtId2.TabIndex = 200;
             // 
             // txtPin2
@@ -742,7 +742,7 @@
             this.txtPin2.Location = new System.Drawing.Point(155, 404);
             this.txtPin2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPin2.Name = "txtPin2";
-            this.txtPin2.Size = new System.Drawing.Size(242, 34);
+            this.txtPin2.Size = new System.Drawing.Size(244, 34);
             this.txtPin2.TabIndex = 207;
             // 
             // label19
@@ -763,7 +763,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(56, 360);
+            this.label20.Location = new System.Drawing.Point(19, 360);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 24);
             this.label20.TabIndex = 220;
@@ -776,7 +776,7 @@
             this.txtHeDieuHanh2.Location = new System.Drawing.Point(155, 176);
             this.txtHeDieuHanh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHeDieuHanh2.Name = "txtHeDieuHanh2";
-            this.txtHeDieuHanh2.Size = new System.Drawing.Size(242, 34);
+            this.txtHeDieuHanh2.Size = new System.Drawing.Size(244, 34);
             this.txtHeDieuHanh2.TabIndex = 202;
             // 
             // txtChip2
@@ -786,7 +786,7 @@
             this.txtChip2.Location = new System.Drawing.Point(155, 356);
             this.txtChip2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChip2.Name = "txtChip2";
-            this.txtChip2.Size = new System.Drawing.Size(242, 34);
+            this.txtChip2.Size = new System.Drawing.Size(244, 34);
             this.txtChip2.TabIndex = 204;
             // 
             // label21
@@ -795,7 +795,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(6, 180);
+            this.label21.Location = new System.Drawing.Point(19, 180);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(120, 24);
             this.label21.TabIndex = 218;
@@ -807,7 +807,7 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(37, 318);
+            this.label24.Location = new System.Drawing.Point(19, 318);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(89, 24);
             this.label24.TabIndex = 219;
@@ -820,7 +820,7 @@
             this.txtManHinh2.Location = new System.Drawing.Point(155, 314);
             this.txtManHinh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtManHinh2.Name = "txtManHinh2";
-            this.txtManHinh2.Size = new System.Drawing.Size(242, 34);
+            this.txtManHinh2.Size = new System.Drawing.Size(244, 34);
             this.txtManHinh2.TabIndex = 203;
             // 
             // btnXoaSanPham2
