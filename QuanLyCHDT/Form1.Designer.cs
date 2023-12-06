@@ -1408,9 +1408,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLyCHDT.Properties.Resources.thuong_hieu_dien_thoai_768x215;
-            this.pictureBox2.Location = new System.Drawing.Point(41, 613);
+            this.pictureBox2.Location = new System.Drawing.Point(41, 513);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(239, 108);
+            this.pictureBox2.Size = new System.Drawing.Size(252, 94);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 227;
             this.pictureBox2.TabStop = false;
@@ -1449,9 +1449,10 @@
             this.btnThem1DienThoai.Location = new System.Drawing.Point(41, 221);
             this.btnThem1DienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem1DienThoai.Name = "btnThem1DienThoai";
-            this.btnThem1DienThoai.Size = new System.Drawing.Size(129, 53);
+            this.btnThem1DienThoai.Size = new System.Drawing.Size(116, 53);
             this.btnThem1DienThoai.TabIndex = 182;
             this.btnThem1DienThoai.Text = "    Thêm";
+            this.btnThem1DienThoai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem1DienThoai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem1DienThoai.UseVisualStyleBackColor = true;
             this.btnThem1DienThoai.Click += new System.EventHandler(this.btnThem1DienThoai_Click_1);
@@ -1463,7 +1464,7 @@
             this.btnDangXuat.Location = new System.Drawing.Point(116, 366);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(119, 53);
+            this.btnDangXuat.Size = new System.Drawing.Size(119, 59);
             this.btnDangXuat.TabIndex = 181;
             this.btnDangXuat.Text = "   Đăng Xuất";
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1488,6 +1489,7 @@
             // 
             this.btnXoa1DienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa1DienThoai.Image = global::QuanLyCHDT.Properties.Resources.icons8_delete_30;
+            this.btnXoa1DienThoai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa1DienThoai.Location = new System.Drawing.Point(176, 296);
             this.btnXoa1DienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa1DienThoai.Name = "btnXoa1DienThoai";
@@ -1507,9 +1509,9 @@
             this.btnLoc.Location = new System.Drawing.Point(41, 296);
             this.btnLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(129, 53);
+            this.btnLoc.Size = new System.Drawing.Size(116, 53);
             this.btnLoc.TabIndex = 180;
-            this.btnLoc.Text = "  Lọc";
+            this.btnLoc.Text = "       Lọc";
             this.btnLoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoc.UseVisualStyleBackColor = true;
