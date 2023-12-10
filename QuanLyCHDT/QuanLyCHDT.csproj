@@ -47,98 +47,108 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CChiTietHoaDon.cs" />
-    <Compile Include="CDienThoai.cs" />
-    <Compile Include="CHang.cs" />
-    <Compile Include="CHoaDon.cs" />
-    <Compile Include="CKhanhHang.cs" />
-    <Compile Include="CTruyXuatDuLieuHangSanXuat.cs" />
-    <Compile Include="CXuLyDienThoai.cs" />
-    <Compile Include="CTruyXuatDuLieuDienThoai.cs" />
-    <Compile Include="CTruyXuatDuLieuKhachHang.cs" />
-    <Compile Include="CXuLyHangSanXuat.cs" />
-    <Compile Include="CXuLyKhachHang.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="access\CTruyXuatDuLieuHoaDon.cs" />
+    <Compile Include="models\CChiTietHoaDon.cs" />
+    <Compile Include="models\CDienThoai.cs" />
+    <Compile Include="models\CHang.cs" />
+    <Compile Include="models\CHoaDon.cs" />
+    <Compile Include="models\CKhanhHang.cs" />
+    <Compile Include="access\CTruyXuatDuLieuHangSanXuat.cs" />
+    <Compile Include="methods\CXuLyDienThoai.cs" />
+    <Compile Include="access\CTruyXuatDuLieuDienThoai.cs" />
+    <Compile Include="access\CTruyXuatDuLieuKhachHang.cs" />
+    <Compile Include="methods\CXuLyHangSanXuat.cs" />
+    <Compile Include="methods\CXuLyKhachHang.cs" />
+    <Compile Include="views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChiTietHoaDon.cs">
+    <Compile Include="views\frmChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChiTietHoaDon.Designer.cs">
+    <Compile Include="views\frmChiTietHoaDon.Designer.cs">
       <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoc.cs">
+    <Compile Include="views\frmLoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoc.Designer.cs">
+    <Compile Include="views\frmLoc.Designer.cs">
       <DependentUpon>frmLoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="views\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="views\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhap1KhachHang.cs">
+    <Compile Include="views\frmNhap1KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhap1KhachHang.Designer.cs">
+    <Compile Include="views\frmNhap1KhachHang.Designer.cs">
       <DependentUpon>frmNhap1KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhapDienThoai.cs">
+    <Compile Include="views\frmNhapDienThoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapDienThoai.Designer.cs">
+    <Compile Include="views\frmNhapDienThoai.Designer.cs">
       <DependentUpon>frmNhapDienThoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductDetail.cs">
+    <Compile Include="views\frmNhapHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductDetail.Designer.cs">
+    <Compile Include="views\frmNhapHoaDon.Designer.cs">
+      <DependentUpon>frmNhapHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmProductDetail.Designer.cs">
       <DependentUpon>frmProductDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSoSanh.cs">
+    <Compile Include="views\frmSoSanh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSoSanh.Designer.cs">
+    <Compile Include="views\frmSoSanh.Designer.cs">
       <DependentUpon>frmSoSanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSuaDienThoai.cs">
+    <Compile Include="views\frmSuaDienThoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSuaDienThoai.Designer.cs">
+    <Compile Include="views\frmSuaDienThoai.Designer.cs">
       <DependentUpon>frmSuaDienThoai.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChiTietHoaDon.resx">
+    <EmbeddedResource Include="views\frmChiTietHoaDon.resx">
       <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoc.resx">
+    <EmbeddedResource Include="views\frmLoc.resx">
       <DependentUpon>frmLoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhap1KhachHang.resx">
+    <EmbeddedResource Include="views\frmNhap1KhachHang.resx">
       <DependentUpon>frmNhap1KhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapDienThoai.resx">
+    <EmbeddedResource Include="views\frmNhapDienThoai.resx">
       <DependentUpon>frmNhapDienThoai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProductDetail.resx">
+    <EmbeddedResource Include="views\frmNhapHoaDon.resx">
+      <DependentUpon>frmNhapHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmProductDetail.resx">
       <DependentUpon>frmProductDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSoSanh.resx">
+    <EmbeddedResource Include="views\frmSoSanh.resx">
       <DependentUpon>frmSoSanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSuaDienThoai.resx">
+    <EmbeddedResource Include="views\frmSuaDienThoai.resx">
       <DependentUpon>frmSuaDienThoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

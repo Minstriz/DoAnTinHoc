@@ -10,6 +10,7 @@ namespace QuanLyCHDT
     {
         string m_maHoaDon;
         string m_maKhachHang;
+        DateTime m_ngayLapHoaDon;
         int m_tongSL;
         int m_tongTien;
 
@@ -17,6 +18,7 @@ namespace QuanLyCHDT
         public string MaKhachHang { get => m_maKhachHang; set => m_maKhachHang = value; }
         public int TongSL { get => m_tongSL; set => m_tongSL = value; }
         public int TongTien { get => m_tongTien; set => m_tongTien = value; }
+        public DateTime NgayLapHoaDon { get => m_ngayLapHoaDon; set => m_ngayLapHoaDon = value; }
 
         public CHoaDon() {
             m_tongTien = 0;
