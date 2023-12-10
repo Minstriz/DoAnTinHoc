@@ -262,70 +262,84 @@
             // txtHangSanXuat
             // 
             this.txtHangSanXuat.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtHangSanXuat.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtHangSanXuat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHangSanXuat.Location = new System.Drawing.Point(155, 131);
             this.txtHangSanXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHangSanXuat.Name = "txtHangSanXuat";
+            this.txtHangSanXuat.ReadOnly = true;
             this.txtHangSanXuat.Size = new System.Drawing.Size(242, 34);
             this.txtHangSanXuat.TabIndex = 226;
             // 
             // txtTenDienThoai
             // 
             this.txtTenDienThoai.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtTenDienThoai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtTenDienThoai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDienThoai.Location = new System.Drawing.Point(155, 89);
             this.txtTenDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenDienThoai.Name = "txtTenDienThoai";
+            this.txtTenDienThoai.ReadOnly = true;
             this.txtTenDienThoai.Size = new System.Drawing.Size(242, 34);
             this.txtTenDienThoai.TabIndex = 201;
             // 
             // txtSoLuongNhap
             // 
             this.txtSoLuongNhap.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtSoLuongNhap.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtSoLuongNhap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuongNhap.Location = new System.Drawing.Point(155, 452);
             this.txtSoLuongNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoLuongNhap.Name = "txtSoLuongNhap";
+            this.txtSoLuongNhap.ReadOnly = true;
             this.txtSoLuongNhap.Size = new System.Drawing.Size(242, 34);
             this.txtSoLuongNhap.TabIndex = 208;
             // 
             // txtRam
             // 
             this.txtRam.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtRam.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtRam.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRam.Location = new System.Drawing.Point(155, 226);
             this.txtRam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRam.Name = "txtRam";
+            this.txtRam.ReadOnly = true;
             this.txtRam.Size = new System.Drawing.Size(242, 34);
             this.txtRam.TabIndex = 205;
             // 
             // txtGiaNhap
             // 
             this.txtGiaNhap.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtGiaNhap.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtGiaNhap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaNhap.Location = new System.Drawing.Point(155, 499);
             this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.ReadOnly = true;
             this.txtGiaNhap.Size = new System.Drawing.Size(242, 34);
             this.txtGiaNhap.TabIndex = 209;
             // 
             // txtRom
             // 
             this.txtRom.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtRom.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtRom.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRom.Location = new System.Drawing.Point(155, 268);
             this.txtRom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRom.Name = "txtRom";
+            this.txtRom.ReadOnly = true;
             this.txtRom.Size = new System.Drawing.Size(242, 34);
             this.txtRom.TabIndex = 206;
             // 
             // txtGiaBan
             // 
             this.txtGiaBan.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtGiaBan.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtGiaBan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBan.Location = new System.Drawing.Point(157, 545);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaBan.Name = "txtGiaBan";
+            this.txtGiaBan.ReadOnly = true;
             this.txtGiaBan.Size = new System.Drawing.Size(242, 34);
             this.txtGiaBan.TabIndex = 210;
             // 
@@ -428,20 +442,24 @@
             // txtIDSanPham
             // 
             this.txtIDSanPham.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtIDSanPham.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtIDSanPham.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDSanPham.Location = new System.Drawing.Point(155, 46);
             this.txtIDSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDSanPham.Name = "txtIDSanPham";
+            this.txtIDSanPham.ReadOnly = true;
             this.txtIDSanPham.Size = new System.Drawing.Size(242, 34);
             this.txtIDSanPham.TabIndex = 200;
             // 
             // txtPin
             // 
             this.txtPin.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtPin.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtPin.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPin.Location = new System.Drawing.Point(155, 404);
             this.txtPin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPin.Name = "txtPin";
+            this.txtPin.ReadOnly = true;
             this.txtPin.Size = new System.Drawing.Size(242, 34);
             this.txtPin.TabIndex = 207;
             // 
@@ -472,20 +490,24 @@
             // txtHeDieuHanh
             // 
             this.txtHeDieuHanh.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtHeDieuHanh.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtHeDieuHanh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeDieuHanh.Location = new System.Drawing.Point(155, 176);
             this.txtHeDieuHanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHeDieuHanh.Name = "txtHeDieuHanh";
+            this.txtHeDieuHanh.ReadOnly = true;
             this.txtHeDieuHanh.Size = new System.Drawing.Size(242, 34);
             this.txtHeDieuHanh.TabIndex = 202;
             // 
             // txtChip
             // 
             this.txtChip.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtChip.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtChip.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChip.Location = new System.Drawing.Point(155, 356);
             this.txtChip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChip.Name = "txtChip";
+            this.txtChip.ReadOnly = true;
             this.txtChip.Size = new System.Drawing.Size(242, 34);
             this.txtChip.TabIndex = 204;
             // 
@@ -516,10 +538,12 @@
             // txtManHinh
             // 
             this.txtManHinh.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtManHinh.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtManHinh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtManHinh.Location = new System.Drawing.Point(155, 314);
             this.txtManHinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtManHinh.Name = "txtManHinh";
+            this.txtManHinh.ReadOnly = true;
             this.txtManHinh.Size = new System.Drawing.Size(242, 34);
             this.txtManHinh.TabIndex = 203;
             // 
@@ -562,70 +586,84 @@
             // txtHang2
             // 
             this.txtHang2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtHang2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtHang2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHang2.Location = new System.Drawing.Point(155, 131);
             this.txtHang2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHang2.Name = "txtHang2";
+            this.txtHang2.ReadOnly = true;
             this.txtHang2.Size = new System.Drawing.Size(244, 34);
             this.txtHang2.TabIndex = 225;
             // 
             // txtTen2
             // 
             this.txtTen2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtTen2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtTen2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen2.Location = new System.Drawing.Point(155, 89);
             this.txtTen2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen2.Name = "txtTen2";
+            this.txtTen2.ReadOnly = true;
             this.txtTen2.Size = new System.Drawing.Size(244, 34);
             this.txtTen2.TabIndex = 201;
             // 
             // txtSoLuongNhap2
             // 
             this.txtSoLuongNhap2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtSoLuongNhap2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtSoLuongNhap2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuongNhap2.Location = new System.Drawing.Point(155, 452);
             this.txtSoLuongNhap2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoLuongNhap2.Name = "txtSoLuongNhap2";
+            this.txtSoLuongNhap2.ReadOnly = true;
             this.txtSoLuongNhap2.Size = new System.Drawing.Size(244, 34);
             this.txtSoLuongNhap2.TabIndex = 208;
             // 
             // txtRam2
             // 
             this.txtRam2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtRam2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtRam2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRam2.Location = new System.Drawing.Point(155, 226);
             this.txtRam2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRam2.Name = "txtRam2";
+            this.txtRam2.ReadOnly = true;
             this.txtRam2.Size = new System.Drawing.Size(244, 34);
             this.txtRam2.TabIndex = 205;
             // 
             // txtGiaNhap2
             // 
             this.txtGiaNhap2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtGiaNhap2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtGiaNhap2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaNhap2.Location = new System.Drawing.Point(155, 499);
             this.txtGiaNhap2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaNhap2.Name = "txtGiaNhap2";
+            this.txtGiaNhap2.ReadOnly = true;
             this.txtGiaNhap2.Size = new System.Drawing.Size(244, 34);
             this.txtGiaNhap2.TabIndex = 209;
             // 
             // txtRom2
             // 
             this.txtRom2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtRom2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtRom2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRom2.Location = new System.Drawing.Point(155, 268);
             this.txtRom2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRom2.Name = "txtRom2";
+            this.txtRom2.ReadOnly = true;
             this.txtRom2.Size = new System.Drawing.Size(244, 34);
             this.txtRom2.TabIndex = 206;
             // 
             // txtGiaBan2
             // 
             this.txtGiaBan2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtGiaBan2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtGiaBan2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBan2.Location = new System.Drawing.Point(157, 545);
             this.txtGiaBan2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaBan2.Name = "txtGiaBan2";
+            this.txtGiaBan2.ReadOnly = true;
             this.txtGiaBan2.Size = new System.Drawing.Size(244, 34);
             this.txtGiaBan2.TabIndex = 210;
             // 
@@ -728,20 +766,24 @@
             // txtId2
             // 
             this.txtId2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtId2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtId2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId2.Location = new System.Drawing.Point(155, 46);
             this.txtId2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId2.Name = "txtId2";
+            this.txtId2.ReadOnly = true;
             this.txtId2.Size = new System.Drawing.Size(244, 34);
             this.txtId2.TabIndex = 200;
             // 
             // txtPin2
             // 
             this.txtPin2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtPin2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtPin2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPin2.Location = new System.Drawing.Point(155, 404);
             this.txtPin2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPin2.Name = "txtPin2";
+            this.txtPin2.ReadOnly = true;
             this.txtPin2.Size = new System.Drawing.Size(244, 34);
             this.txtPin2.TabIndex = 207;
             // 
@@ -772,20 +814,24 @@
             // txtHeDieuHanh2
             // 
             this.txtHeDieuHanh2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtHeDieuHanh2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtHeDieuHanh2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeDieuHanh2.Location = new System.Drawing.Point(155, 176);
             this.txtHeDieuHanh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHeDieuHanh2.Name = "txtHeDieuHanh2";
+            this.txtHeDieuHanh2.ReadOnly = true;
             this.txtHeDieuHanh2.Size = new System.Drawing.Size(244, 34);
             this.txtHeDieuHanh2.TabIndex = 202;
             // 
             // txtChip2
             // 
             this.txtChip2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtChip2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtChip2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChip2.Location = new System.Drawing.Point(155, 356);
             this.txtChip2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChip2.Name = "txtChip2";
+            this.txtChip2.ReadOnly = true;
             this.txtChip2.Size = new System.Drawing.Size(244, 34);
             this.txtChip2.TabIndex = 204;
             // 
@@ -816,10 +862,12 @@
             // txtManHinh2
             // 
             this.txtManHinh2.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtManHinh2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtManHinh2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtManHinh2.Location = new System.Drawing.Point(155, 314);
             this.txtManHinh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtManHinh2.Name = "txtManHinh2";
+            this.txtManHinh2.ReadOnly = true;
             this.txtManHinh2.Size = new System.Drawing.Size(244, 34);
             this.txtManHinh2.TabIndex = 203;
             // 

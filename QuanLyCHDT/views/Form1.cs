@@ -24,10 +24,11 @@ namespace QuanLyCHDT
         private List<CKhachHang> dskh = new List<CKhachHang>();
         private List<CHang> dsHang = new List<CHang>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
-        private CTruyXuatDuLieuKhachHang txkh =  new CTruyXuatDuLieuKhachHang();
+       
         private CXuLyDienThoai xuly = new CXuLyDienThoai();
         private CXuLyKhachHang xulyKH = new CXuLyKhachHang();
         private CXuLyHangSanXuat xulyHSX = new CXuLyHangSanXuat();
+        private CTruyXuatDuLieuKhachHang txkh = new CTruyXuatDuLieuKhachHang();
         private CTruyXuatDuLieuDienThoai txdt = new CTruyXuatDuLieuDienThoai();
         private CTruyXuatDuLieuHangSanXuat txhsx = new CTruyXuatDuLieuHangSanXuat();
         string radioValue;
@@ -465,6 +466,18 @@ namespace QuanLyCHDT
         }
 
         private void btnThoat1KhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kháchHàngMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmNhap1KhachHang frm = new frmNhap1KhachHang(); 
+            frm.Show();
+        }
+
+        private void tabQuanLyKhachHang_Click(object sender, EventArgs e)
         {
 
         }

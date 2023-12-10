@@ -34,13 +34,12 @@ namespace QuanLyCHDT
         }
         private void LocDsDienThoai()
         {
-            //bool flag = false;
+
             List<CDienThoai> dsLoc = new List<CDienThoai>();
             string value = txtLoc.Text; //lấy value trong textbox
             string comboBoxValue = cbLoc.SelectedItem.ToString();
-            if (/*flag == false &&*/ txtLoc.Text != "")
+            if (txtLoc.Text != "")
             {
-                //flag = true;
                 CXuLyDienThoai xuly = new CXuLyDienThoai();
                 xuly.tim(comboBoxValue, value, ref dsdt, ref dsLoc);
                 dgvDienThoaiLoc.DataSource = dsLoc.ToList();
