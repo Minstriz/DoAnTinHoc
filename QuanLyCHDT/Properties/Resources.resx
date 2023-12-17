@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RBN-Sim-800-200-800x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RBN-Sim-800-200-800x200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-search-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-search-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,11 +145,11 @@
   <data name="z4840086726358_c721c3d42db96de34e17cf10b7fc07c5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4840086726358_c721c3d42db96de34e17cf10b7fc07c5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iphone-12-note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iphone-12-note.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-search-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-search-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iphone-12-note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iphone-12-note.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-compare-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-compare-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +163,7 @@
   <data name="icons8-replace-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-replace-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RBN-Sim-800-200-800x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RBN-Sim-800-200-800x200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-sort-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-sort-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

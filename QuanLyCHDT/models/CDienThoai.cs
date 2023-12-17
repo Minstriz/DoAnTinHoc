@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace QuanLyCHDT
 {
     [Serializable]
-    class CDienThoai
+    public class CDienThoai
     {
         private string m_idSanPham;
         private string m_idHang; 

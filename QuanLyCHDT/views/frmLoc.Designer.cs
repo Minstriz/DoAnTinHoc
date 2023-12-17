@@ -116,12 +116,12 @@
             this.pin,
             this.Column8,
             this.Column9});
-            this.dgvDienThoaiLoc.Location = new System.Drawing.Point(12, 143);
+            this.dgvDienThoaiLoc.Location = new System.Drawing.Point(12, 199);
             this.dgvDienThoaiLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDienThoaiLoc.Name = "dgvDienThoaiLoc";
             this.dgvDienThoaiLoc.RowHeadersWidth = 51;
             this.dgvDienThoaiLoc.RowTemplate.Height = 24;
-            this.dgvDienThoaiLoc.Size = new System.Drawing.Size(799, 456);
+            this.dgvDienThoaiLoc.Size = new System.Drawing.Size(799, 400);
             this.dgvDienThoaiLoc.TabIndex = 174;
             // 
             // Column1
