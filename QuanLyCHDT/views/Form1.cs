@@ -21,7 +21,6 @@ namespace QuanLyCHDT
     public partial class FormMain : Form
     {
         private List<CDienThoai> DsDienThoai = new List<CDienThoai>();
-        private List<CDienThoai> DsTemp = new List<CDienThoai>();
         private List<CKhachHang> dskh = new List<CKhachHang>();
         private List<CHang> dsHang = new List<CHang>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
@@ -86,9 +85,7 @@ namespace QuanLyCHDT
             {
                 hienThiDSHoaDon();
             }
-            //combobox Sort
-            
-
+            updateComboboxKhachHang_QLDH();
         }
         private void updateComboboxHangSanXuatMainView()
         {
@@ -98,7 +95,6 @@ namespace QuanLyCHDT
                 cbHangSanXuat.Items.Add(c.TenHang);
             }
         }
-
         private void btnThem1DienThoai_Click(object sender, EventArgs e)
         {
             frmNhapDienThoai frm = new frmNhapDienThoai();
@@ -111,7 +107,6 @@ namespace QuanLyCHDT
             frm.ShowDialog();
             this.Hide();
         }
-
         private void btnXoa1DienThoai_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -137,24 +132,17 @@ namespace QuanLyCHDT
                 truyxuat.ghiFile("QLDSDT.txt", ref DsDienThoai); //cap nhat lai file sau khi xoa. 
             }
         }
-
         private void btnLoc_Click_1(object sender, EventArgs e)
         {
             frmLoc frm = new frmLoc();
             frm.ShowDialog();
         }
-
-
-
         private void btnNhap1KhachHang_Click(object sender, EventArgs e)
         {
             frmNhap1KhachHang frm = new frmNhap1KhachHang();
             frm.ShowDialog();
             this.Hide();
         }
-
-
-
         private void btnXoa1KhachHang_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa khách hàng này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -180,15 +168,11 @@ namespace QuanLyCHDT
                 txkh.ghiFile("QLDSKH.txt", ref dskh); //cap nhat lai file sau khi xoa. 
             }
         }
-
-
         private void cbLoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtLocKhachHang.Enabled = true;
             txtLocKhachHang.ForeColor = Color.Black;
         }
-
-
         private void locTheoHang()
         {
             List<CDienThoai> dsLocHang = new List<CDienThoai>();
@@ -290,8 +274,6 @@ namespace QuanLyCHDT
             frmSoSanh frm = new frmSoSanh();
             frm.ShowDialog();
         }
-
-
         private void txtLocKhachHang_MouseClick(object sender, MouseEventArgs e)
         {
             txtLocKhachHang.SelectAll();
@@ -358,15 +340,10 @@ namespace QuanLyCHDT
 
             }
         }
-
-
         private void QLHSXdgvHangSanXuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             locTheoHang();
         }
-
-
-
         private void btnXoaHSX_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -536,6 +513,7 @@ namespace QuanLyCHDT
         {
             hoaDonTamThoi = new CHoaDon();
             txt_MaKHHD.Text = "";
+            cmbKH_QLDH.Text = null;
             rdbt_Sau.Checked = rdbt_Truoc.Checked = false;
             cb_sanpham.SelectedValue = "";
             txt_SLHD.Text = "";
@@ -560,45 +538,34 @@ namespace QuanLyCHDT
                 MessageBox.Show("Vui lòng chọn trạng thái hóa đơn !!", "Thông báo");
                 return;
             }
-
             if (txt_MaKHHD.Text != "")
             {
                 if (dskh.Find(kh => kh.MaKhachHang == txt_MaKHHD.Text) == null)
                 {
-                    MessageBox.Show("Mã khách hàng không tồn tại, vui lòng để trống đôi với khách hàng không phải là hội viên !!", "Thông báo");
+                    MessageBox.Show("Mã khách hàng không tồn tại", "Thông báo");
                 }
             }
-
             if (hoaDonTamThoi.getDsMua().Count == 0)
             {
                 MessageBox.Show("Chưa có sản phẩm nào !!", "Thông báo");
                 return;
             }
-
-            //Xử lý mã hóa đơn: HD12001 (12 là ngày lập, 001 là thứ tự)
+            //Quy tắc xử lý mã hóa đơn: HD12001 (12 là ngày lập, 001 là thứ tự)
             hoaDonTamThoi.MaHoaDon = "HD" + DateTime.Now.ToString("dd");
             string s = Convert.ToString(qlhd.GetDsHoaDon.Count + 1);
             while (s.Length < 3)
                 s = "0" + s;
             hoaDonTamThoi.MaHoaDon += s;
-
             hoaDonTamThoi.MaKhachHang = txt_MaKHHD.Text;
-
             hoaDonTamThoi.capNhatChiTiet(DateTime.Now, rdbt_Truoc.Checked);
-
             qlhd.them(hoaDonTamThoi);
             hienThiDSHoaDon();
-            btn_LammoiHD_Click(sender, e);
-        }
-
-        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
             if (!qlhd.ghiFile("DanhSachHoaDon.txt"))
             {
                 MessageBox.Show("Lưu danh sách hóa đơn bị lỗi !!", "Thông báo");
             }
+            btn_LammoiHD_Click(sender, e);
         }
-
         private void rdbt_Tatca_CheckedChanged(object sender, EventArgs e)
         {
             hienThiDSHoaDon();
@@ -637,6 +604,10 @@ namespace QuanLyCHDT
             {
                 currentHoaDon = (CHoaDon)dgv_dsHoaDon.Rows[e.RowIndex].DataBoundItem;
                 txt_MaKHHD.Text = currentHoaDon.MaKhachHang.ToString();
+                CKhachHang temp = new CKhachHang();
+                temp = xulyKH.timKH(txt_MaKHHD.Text, dskh);
+             
+                cmbKH_QLDH.Text = temp.ToString();
                 if (currentHoaDon.TinhTrang is "Đã thanh toán")
                 {
                     rdbt_Truoc.Checked = true;
@@ -648,19 +619,24 @@ namespace QuanLyCHDT
                 
             }
         }
-
         private void cbHangSanXuat_Click(object sender, EventArgs e)
         {
             updateComboboxHangSanXuatMainView();
         }
-
+        private void updateComboboxKhachHang_QLDH()
+        {
+            cmbKH_QLDH.Items.Clear();
+            foreach(CKhachHang c in dskh)
+            {
+                cmbKH_QLDH.Items.Add(c.ToString());
+            }
+        }
         private void btnSort_Click(object sender, EventArgs e)
         {
             {
                 sapXep();
             }
         }
-
         private void sapXep()
         {
             if (truyxuat.docFile("QLDSDT.txt", ref DsDienThoai) == true)
@@ -699,7 +675,6 @@ namespace QuanLyCHDT
                 }
             }
         }
-
         private void btnUpdateTinhTrang_Click(object sender, EventArgs e)
         {
             if (rdbt_Truoc.Checked is true)
@@ -727,6 +702,19 @@ namespace QuanLyCHDT
         private void rdbt_Truoc_Click(object sender, EventArgs e)
         {
             btnUpdateTinhTrang.Enabled = true;
+        }
+
+        private void cmbKH_QLDH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra xem combobox có giá trị được chọn hay không
+            if (cmbKH_QLDH.SelectedItem != null)
+            {
+                // Lấy mã khách hàng
+                string maKhachHang = cmbKH_QLDH.SelectedItem.ToString().Split(new char[] { '-' }, 2)[0];
+
+                // Gán mã khách hàng vào ô textbox
+                txt_MaKHHD.Text = maKhachHang;
+            }
         }
     }
 }

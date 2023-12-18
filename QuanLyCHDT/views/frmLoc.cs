@@ -27,6 +27,7 @@ namespace QuanLyCHDT
         private void frmLoc_Load(object sender, EventArgs e)
         {
             truyxuat.docFile("QLDSDT.txt", ref dsdt);
+            dgvDienThoaiLoc.DataSource = dsdt.ToList();
         }
         private void Sort(object sender, EventArgs e)
         {
@@ -34,7 +35,6 @@ namespace QuanLyCHDT
         }
         private void LocDsDienThoai()
         {
-
             List<CDienThoai> dsLoc = new List<CDienThoai>();
             string value = txtLoc.Text; //lấy value trong textbox
             string comboBoxValue = cbLoc.SelectedItem.ToString();

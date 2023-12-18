@@ -47,6 +47,9 @@ namespace QuanLyCHDT
             //m_taiKhoan = TaiKhoan;
             //m_matKhau = MatKhau;
         }
-
+        public override string ToString()
+        {
+            return MaKhachHang+"-"+TenKhachHang+"-"+SoDienThoai;
+        }
     }
 }

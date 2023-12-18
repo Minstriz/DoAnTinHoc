@@ -53,7 +53,7 @@
     <Compile Include="models\CDienThoai.cs" />
     <Compile Include="models\CHang.cs" />
     <Compile Include="models\CHoaDon.cs" />
-    <Compile Include="models\CKhanhHang.cs" />
+    <Compile Include="models\CKhachHang.cs" />
     <Compile Include="access\CTruyXuatDuLieuHangSanXuat.cs" />
     <Compile Include="methods\CXuLyDienThoai.cs" />
     <Compile Include="access\CTruyXuatDuLieuDienThoai.cs" />
@@ -96,18 +96,6 @@
     <Compile Include="views\frmNhapDienThoai.Designer.cs">
       <DependentUpon>frmNhapDienThoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\frmNhapHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\frmNhapHoaDon.Designer.cs">
-      <DependentUpon>frmNhapHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="views\frmProductDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\frmProductDetail.Designer.cs">
-      <DependentUpon>frmProductDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="views\frmSoSanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,12 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\frmNhapDienThoai.resx">
       <DependentUpon>frmNhapDienThoai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\frmNhapHoaDon.resx">
-      <DependentUpon>frmNhapHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\frmProductDetail.resx">
-      <DependentUpon>frmProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\frmSoSanh.resx">
       <DependentUpon>frmSoSanh.cs</DependentUpon>
