@@ -15,10 +15,10 @@ namespace QuanLyCHDT
     public partial class frmNhapDienThoai : Form
     {
         private List<CDienThoai> DsDienThoai = new List<CDienThoai>();
+        private List<CXuLyDienThoai> xldt = new List<CXuLyDienThoai>();
         private List<CHang> DsHang = new List<CHang>();
         private CTruyXuatDuLieuDienThoai truyxuat = new CTruyXuatDuLieuDienThoai();
         private CTruyXuatDuLieuHangSanXuat truyxuathang  = new CTruyXuatDuLieuHangSanXuat();
-        //private CXuLyDienThoai xuly = new CXuLyDienThoai();
         public frmNhapDienThoai()
         {
             InitializeComponent();
@@ -97,7 +97,6 @@ namespace QuanLyCHDT
         {
             if (truyxuat.docFile("QLDSDT.txt", ref DsDienThoai) == true)
             {
-                //hienThi();
                 ///MessageBox.Show("đã đọc được dữ liệu!", "Thông báo");
             }
             else
@@ -114,7 +113,5 @@ namespace QuanLyCHDT
             }
             updateComboboxHangSanXuat();
         }
-
-
     }
 }

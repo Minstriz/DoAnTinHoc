@@ -45,7 +45,12 @@ namespace QuanLyCHDT
             GiaBan = "";
             SoLuongNhap = "";
         }
-        public CDienThoai(string IdSanPham,string idHang, string TenDienThoai, string HangSanXuat, string HeDieuHanh, string ManHinh, string Chip, string Ram, string Rom, string Pin, string GiaNhap, string GiaBan, string SoLuongNhap)
+        public CDienThoai(string IdSanPham,string idHang,
+            string TenDienThoai, string HangSanXuat,
+            string HeDieuHanh, string ManHinh, 
+            string Chip, string Ram, string Rom, 
+            string Pin, string GiaNhap, 
+            string GiaBan, string SoLuongNhap)
         {
             m_idSanPham = IdSanPham;
             m_idHang = IdHang;
