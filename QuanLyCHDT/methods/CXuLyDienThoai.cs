@@ -19,6 +19,7 @@ namespace QuanLyCHDT
             }
             return null;
         }
+
         public void timTheoHang(string radioValue, ref List<CDienThoai> DsDienThoai, ref List<CDienThoai> dsLoc)
         {
             foreach (CDienThoai a in DsDienThoai)
@@ -125,7 +126,6 @@ namespace QuanLyCHDT
                 }
             }
         }
-
 
     }
 }

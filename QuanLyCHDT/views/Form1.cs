@@ -657,22 +657,6 @@ namespace QuanLyCHDT
                         dgvDienThoai.DataSource = DsDienThoai;
                     }
                 }
-                else if (cmbSort.SelectedItem.ToString() == ("Giá thấp tới cao"))
-                {
-                    foreach (CDienThoai sort in DsDienThoai)
-                    {
-                        DsDienThoai.Sort((kh1, kh2) => kh2.GiaBan.CompareTo(kh1.GiaBan));
-                        dgvDienThoai.DataSource = DsDienThoai;
-                    }
-                }
-                else if (cmbSort.SelectedItem.ToString() == ("Giá cao tới thấp"))
-                {
-                    foreach (CDienThoai sort in DsDienThoai)
-                    {
-                        DsDienThoai.Sort((kh1, kh2) => kh1.GiaBan.CompareTo(kh2.GiaBan));
-                        dgvDienThoai.DataSource = DsDienThoai;
-                    }
-                }
             }
         }
         private void btnUpdateTinhTrang_Click(object sender, EventArgs e)

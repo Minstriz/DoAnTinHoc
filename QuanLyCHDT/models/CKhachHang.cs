@@ -24,19 +24,16 @@ namespace QuanLyCHDT
         public string SoDienThoai { get => m_soDienThoai; set => m_soDienThoai = value; }
         public string DiaChiEmail { get => m_diaChiEmail; set => m_diaChiEmail = value; }
         public string Phai { get => m_phai; set => m_phai = value; }
-        //public string TaiKhoan { get => m_taiKhoan; set => m_taiKhoan = value; }
-        //public string MatKhau { get => m_matKhau; set => m_matKhau = value; }
-
         public CKhachHang() {
             m_maKhachHang = "";
             m_tenKhachHang = "";
             m_ngayThangNamSinh = DateTime.Now;
             m_diaChiEmail = "";
-            m_phai = ""; //default: nam
-            //m_taiKhoan = "";
-            //m_matKhau = "";
+            m_phai = ""; 
         }
-        public CKhachHang(string maKhachHang, string tenKhachHang, DateTime NgayThangNamSinh, string SoDienThoai, String DiaChiEmail, string Phai)
+        public CKhachHang(string maKhachHang, string tenKhachHang,
+            DateTime NgayThangNamSinh, string SoDienThoai,
+            String DiaChiEmail, string Phai)
         {
             m_maKhachHang = maKhachHang;
             m_tenKhachHang= tenKhachHang;
@@ -44,8 +41,6 @@ namespace QuanLyCHDT
             m_phai= Phai;
             m_diaChiEmail= DiaChiEmail;
             m_ngayThangNamSinh= NgayThangNamSinh;
-            //m_taiKhoan = TaiKhoan;
-            //m_matKhau = MatKhau;
         }
         public override string ToString()
         {
