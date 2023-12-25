@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.Cryptography;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static QuanLyCHDT.CHang;
 
 namespace QuanLyCHDT
 {
@@ -698,6 +691,80 @@ namespace QuanLyCHDT
 
                 // Gán mã khách hàng vào ô textbox
                 txt_MaKHHD.Text = maKhachHang;
+            }
+        }
+
+        private void lbLocTheo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThongKeKH_Click(object sender, EventArgs e)
+        {
+            if (dgvKhachHang.Rows.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                save.FileName = "CustomerList.pdf";
+                bool x = false;
+                if (File.Exists(save.FileName))
+                {
+                    try
+                    {
+                        File.Delete(save.FileName);
+                    }
+                    catch
+                    {
+                        x = true;
+                        MessageBox.Show("Không thể chuyển");
+                    }
+                }
+                if (!x)
+                {
+                    try
+                    {
+                        PdfPTable pTable = new PdfPTable(dgvKhachHang.Columns.Count);
+                        pTable.DefaultCell.Padding = 2;
+                        pTable.WidthPercentage = 100;
+                        pTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                        BaseFont bf = BaseFont.CreateFont("c:/windows/fonts/arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 8, iTextSharp.text.Font.NORMAL);
+                        foreach (DataGridViewColumn col in dgvKhachHang.Columns)
+                        {
+                            PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
+                            pTable.AddCell(pCell);
+                        }
+                        foreach (DataGridViewRow viewRow in dgvKhachHang.Rows)
+                        {
+                            foreach (DataGridViewCell cell in viewRow.Cells)
+                            {
+                                PdfPCell pCell = new PdfPCell(new Phrase(cell.Value.ToString(), font));
+                                pTable.AddCell(pCell);
+                            }
+                        }
+                        using (FileStream a = new FileStream(save.FileName, FileMode.Create))
+                        {
+
+                            Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
+                            PdfWriter.GetInstance(document, a);
+                            document.Open();
+                            document.AddTitle("Report");
+                            document.Add(pTable);
+                            document.Close();
+                            a.Close();
+                        }
+                        MessageBox.Show("Thành Công");
+                        Process.Start(save.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("error" + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("error");
             }
         }
     }

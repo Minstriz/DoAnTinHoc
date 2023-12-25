@@ -91,11 +91,8 @@ namespace QuanLyCHDT
         }
             private void btnThem1DienThoai_Click(object sender, EventArgs e)
             {
-                if (kt)
-                    Them();
-                else 
-                    Sua();
-                if (truyxuat.ghiFile("QLDSKH.txt", ref dskh) == true)
+                 Them();
+               if (truyxuat.ghiFile("QLDSKH.txt", ref dskh) == true)
                 {
                     MessageBox.Show(btnThem1KhachHang.Text + " thành công", "Thông báo");
                 }
